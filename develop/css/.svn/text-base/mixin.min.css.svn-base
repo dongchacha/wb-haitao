@@ -1,0 +1,22 @@
+/**
+ *  通用混合集合 编写和使用需注释标识
+ *  @Name AshaLiu
+ *  @Date 2016-5-9
+ */
+/* 通用模块组件 */
+/* border 1px */
+.ks-clear {
+  *zoom: 1;
+}
+.ks-clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.f-fl {
+  float: left;
+}
+.f-fr {
+  float: right;
+}

@@ -1,0 +1,22 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="evaluate-item" ng-repeat="item in evalute_data">
+	<div class="pro-info half-bottom-border">
+		<div class="pic half-border"><img bt-pic ng-model="item.goods_image_url" /></div>
+		<h4>评分：</h4>
+		<div class="star"><i class="iconfont ks-cPrimary" ng-repeat="i in [1,2,3,4,5]" ng-class='{true: "icon-starts", false: "icon-start"}[item.goods_score >= i]' ng-click="setScore($parent.$index, i)"></i></div>
+	</div>
+
+	<div class="describe">
+		<textarea placeholder="写下购买体会和购买感受来帮助其它小伙伴～" ng-model="item.goods_comment"></textarea>	
+		<p class="say">有图有真相，给小伙伴晒一晒</p>
+		<div class="pic-container">
+			<div class="file-upload" ng-model="item.goods_image" limit="5"></div>
+			<p>最多上传5张</p>
+		</div>
+	</div>
+</div>
+
+<div class="fixed-bottom">
+	<a class="action-btn" href="javascript:void(0);" ng-click="submit()">提交</a>
+</div>

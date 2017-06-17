@@ -1,0 +1,53 @@
+{
+    "code": 200,
+    "hasmore": false,
+    "page_total": 1,
+    "datas": {
+        "brand_id": 32,
+        "goods_name": "雅诗兰黛",
+        "goods_bg": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+        "goods_img": "http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+        "desc": "发射点法大师傅的萨芬士大夫的说法的撒更多萨嘎；解开了",
+        "goods_list": [{
+            "goods_id": "52",
+            "goods_name": "新款 女款 拼接 不规则摆 长袖针织衫开衫 杏雨 白色",
+            "goods_price": "58.00",
+            "goods_marketprice": "483.00",
+            "goods_salenum": "0",
+            "evaluation_good_star": "5",
+            "evaluation_count": "0",
+            "have_gift": "0",
+            "goods_image_url": "http://img13.360buyimg.com/n7/jfs/t3157/71/40950569/118119/bf78a233/57a16d01N0757444b.jpg"
+        }, {
+            "goods_id": "46",
+            "goods_name": "春装 披肩式 超短款 针织 衫开衫 女装 青鸟 绿色",
+            "goods_price": "129.00",
+            "goods_marketprice": "358.00",
+            "goods_salenum": "1",
+            "evaluation_good_star": "5",
+            "evaluation_count": "0",
+            "have_gift": "0",
+            "goods_image_url": "http://img12.360buyimg.com/n7/g13/M07/02/16/rBEhU1M-X3MIAAAAAAC8sMBcBh0AALPVAJrwNMAALzI752.jpg"
+        }, {
+            "goods_id": "46",
+            "goods_name": "春装 披肩式 超短款 针织 衫开衫 女装 青鸟 绿色",
+            "goods_price": "129.00",
+            "goods_marketprice": "358.00",
+            "goods_salenum": "1",
+            "evaluation_good_star": "5",
+            "evaluation_count": "0",
+            "have_gift": "0",
+            "goods_image_url": "http://img10.360buyimg.com/n1/jfs/t2944/294/1717608890/94829/4676883/578c2729N233c23b0.jpg"
+        }, {
+            "goods_id": "46",
+            "goods_name": "春装 披肩式 超短款 针织 衫开衫 女装 青鸟 绿色",
+            "goods_price": "129.00",
+            "goods_marketprice": "358.00",
+            "goods_salenum": "1",
+            "evaluation_good_star": "5",
+            "evaluation_count": "0",
+            "have_gift": "0",
+            "goods_image_url": "http://img14.360buyimg.com/n7/jfs/t2599/255/3790002264/55183/13c33e50/5799d620N36a755f6.jpg"
+        }]
+    }
+}

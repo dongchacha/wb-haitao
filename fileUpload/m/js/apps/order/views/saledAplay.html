@@ -1,0 +1,72 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<section class="half-bottom-borde pro-list">
+	<div class="pro-item">
+		<div class="section half-bottom-border">
+			<span class="pic half-border"><img bt-pic ng-model="pro.goods_image_url" /></span>
+			<div class="info-rect" ng-init="">
+				<div class="title">
+					<span>{{pro.goods_name}}</span>
+					<span class="price">¥{{Util.toFixed(pro.goods_price, 2)}}<b>x{{pro.goods_num}}</b></span>
+				</div>
+				<div class="desc">
+					<span ng-repeat="spec in pro.goods_spec.split(',')">{{spec.split(':')[0]}}<b>{{spec.split(':')[1]}}</b></span>
+				</div>
+				<div class="fTo-bottom ks-clear">
+					<a class="common-btn ks-fright ks-cPrimary" href="tel:">联系卖家</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="apply-type">
+	<h3>服务类型</h3>
+	<div class="btn-container">
+		<a class="common-btn" ng-class='{true: "ks-cPrimary"}[applyInfo.refund_type==2]' ng-click="applyInfo.refund_type=2" ng-if="pro.order_state != 20">退货</a>
+		<a class="common-btn" ng-class='{true: "ks-cPrimary"}[applyInfo.refund_type==1]' ng-click="applyInfo.refund_type=1">退款</a>
+	</div>
+</section>
+
+<section class="apply-count">
+	<h3>申请数量</h3>
+	<div class="count-box">
+		<i class="iconfont reduce" ng-click="modifyCount(applyInfo.goods_sum-1)">&#xe612;</i>
+		<span>{{applyInfo.goods_sum}}</span>
+		<i class="iconfont add" ng-click="modifyCount(applyInfo.goods_sum+1)">&#xe610;</i>
+		<!-- <i class="iconfont" ng-class='{true: "icon-subtract", false:"icon-subtracts forbid"}[applyInfo.goods_sum>2]' ng-click="modifyCartCount($parent.$index, $index, pro.goods_num-1)"></i>
+		<span>{{applyInfo.goods_sum}}</span>
+		<i class="iconfont" ng-class='{true: "icon-adds", false:"icon-addn forbid"}[applyInfo.goods_sum<pro.goods_num]' ng-click="modifyCartCount($parent.$index, $index, pro.goods_num+1)"></i>-->
+	</div>
+</section>
+
+<section class="refund-type">
+	<span>请选择原因</span>
+	<span class="input-span half-border">
+		<input type="text" value="{{reseanData[applyInfo.reason_id]}}" readonly="readonly" />
+	</span>
+	<select ng-model="applyInfo.reason_id">
+		<option ng-repeat="(key, val) in reseanData" value="{{key}}">{{val}}</option>
+	</select>
+	<i class="iconfont icon-arrow"></i>
+</section>
+
+<section class="apply-money ks-clear">
+	<span>申请金额</span>
+	<span class="input-span half-border">
+		<input type="number" ng-model="applyInfo.refund_amount" placeholder="不能超过{{Util.toFixed(sumAmount, 2)}}" maxlength="5" /></span>
+</section>
+
+<section class="describe">
+	<textarea ng-model="applyInfo.buyer_message" placeholder="问题描述....最多200个字"></textarea>	
+	<div class="pic-container">
+		<div class="file-upload" ng-model="applyInfo.refund_pic" limit="3"></div>
+		<p>最多上传3张</p>
+	</div>
+</section>
+
+<div style="height: 44px;"></div>
+
+<div class="fixed-bottom">
+	<a class="action-btn" href="javascript:void(0);" ng-click="submit()">提交</a>
+</div>

@@ -1,0 +1,58 @@
+<header class="common-header half-bottom-border">
+    <a href="javascript:history.back();" class="iconfont icon-arrow-left"></a>
+    <!-- <span>{{pageTitle}}</span> -->
+    <div class="search-box ks-clear">
+    	<i class="iconfont icon-sousuo"></i><input placeholder="搜索商品或品牌" ng-model="pagerParams.queryKey" readonly="readonly" ng-click="openSearch('key')"/>
+    	<span ng-click="clearKeySearch()" ng-if='pagerParams.queryKey!=""'>{{pagerParams.queryKey}}<b class="iconfont icon-close"></b></span>
+    </div>
+</header>
+
+<div class="search-bar half-bottom-border">
+	<a ng-click="changeSort(1)" ng-class='{"ks-cPrimary":pagerParams.sortRule==1}'>
+		<span>{{sortName||"人气"}}</span>
+	</a>
+	<a ng-click="changeSort(2)" ng-class='{"ks-cPrimary":pagerParams.sortRule==2}'>
+		<span>{{brandName||"销量"}}</span>
+	</a>
+	<a ng-click="changeSort(pagerParams.sortRule==4?3:4)" ng-class='{"ks-cPrimary":pagerParams.sortRule==3 || pagerParams.sortRule==4}'>
+		<span>{{priceName||"价格"}}
+		</span>
+		<i class="iconfont icon-arrow2-up" ng-class='{"ks-cPrimary":pagerParams.sortRule==4}'></i>
+		<i class="iconfont icon-arrow3-down" ng-class='{"ks-cPrimary":pagerParams.sortRule==3}'></i>
+	</a>
+	<a ng-click="openSearch('multiple')" ng-class='{"ks-cPrimary":searchRoute.multiple.showState==1}'>
+		<span>筛选
+		</span>
+		<i class="iconfont icon-arrow2-up ks-cPrimary" ng-show="searchRoute.multiple.showState==1"></i>
+		<i class="iconfont icon-arrow3-down" ng-show="searchRoute.multiple.showState!=1"></i>
+	</a>
+</div>
+
+<section class="main-body">
+	<div class="pro-wrapper my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading">
+		<div class="pro-list double-col">
+			<div class="pro-item" ng-repeat="pro in dataList">
+				<div class="section" ui-sref="product.detail({id:pro.goods_id})">
+					<span class="pic"><img ng-src="{{pro.goods_image_url}}" /></span>
+					<div class="info-rect">
+						<div class="title">
+							<span>{{pro.goods_brief}}</span>
+							<span class="price ks-cPrimary">¥{{Util.toFixed(pro.goods_price, 2)}}<i>¥{{Util.toFixed(pro.goods_marketprice, 2)}}</i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="search-multiple search-wrapper an-slideUp" ng-include="searchRoute.multiple.tmpUrl" ng-if="searchRoute.multiple.showState==1" ng-controller="searchRoute.multiple.controller as vm" ng-class="{true:'an-delay'}[searchRoute.multiple.isDeley]"></div>
+</section>
+
+<div class="noData" ng-if="!isLoading&&dataList.length==0">
+	<div class="content">
+		<i class="iconfont icon-sousuo"></i>
+		<p>抱歉，没有找到相关的商品，<br/>您可以换个词再试试</p>
+	</div>
+</div>
+
+<div class="search-wrapper search-key an-slideDown" ng-include="searchRoute.key.tmpUrl" ng-if="searchRoute.key.showState==1" ng-controller="searchRoute.key.controller as vm"></div>

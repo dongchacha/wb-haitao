@@ -1,0 +1,60 @@
+{
+	"code":200,
+	"datas": {
+        "store_propose": {
+            "good_cls_id": 3,
+            "total_num":2,
+            "page_num":3,
+            "prop_goods": [
+                {
+                    "good_id":2,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                }
+            ]
+        }
+	}
+}

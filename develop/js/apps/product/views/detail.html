@@ -1,0 +1,126 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<section class="adv-module">
+    <div class="advs-container" img-scroll is-init="isPicInit" index="picShowIndex" flexable preview loop="true">
+        <ul class="pics">
+            <li ng-repeat="item in pro.goods_image" ng-init="initImgScroll($last)"><a><img ng-src="{{item}}" /></a></li>
+        </ul>
+
+        <ul class="sort">
+            <li ng-repeat="item in pro.goods_image" ng-class='{true:"curr"}[picShowIndex==$index]'></li>
+        </ul>
+    </div>           
+</section>
+
+<section class="info-sect title-rect half-top-border half-bottom-border">
+    <div class="price half-bottom-border"><strong>¥ {{pro.goods_info.goods_promotion_price}}</strong>  <span class="original-price">¥{{pro.goods_info.goods_marketprice}}</span> <b class="half-border">免税费</b></div>
+    <div class="title">{{pro.goods_info.goods_name}}</div>
+    <div class="prompt">18:00前付款，预计15日到达</div>
+</section>
+
+<section class="info-sect half-top-border half-bottom-border">
+    <div class="line half-bottom-border" ng-click="showOverlay(1)">产品参数<i class="iconfont icon-arrow"></i></div>
+    <div class="line" ng-click="showOverlay(2)">选择 属性 规格<i class="iconfont icon-arrow"></i></div>
+</section>
+
+<section class="info-sect half-top-border half-bottom-border">
+    <div class="line half-bottom-border" ng-click="showOverlay(3)">店铺简介<i class="iconfont icon-arrow"></i></div>
+</section>
+
+<section class="info-sect half-top-border half-bottom-border">
+    <div class="line" ui-sref="product.detail.evaluate">其它小伙伴都在说({{pro.goods_info.evaluation_count}})<i class="iconfont icon-arrow"></i></div>
+</section>
+
+<ul class="info-sect pro-nav half-bottom-border">
+    <li ng-class='{true:"curr"}[contentShowIndex==1111]' ng-click="contentShowIndex=0">图文详情</li>
+    <!-- <li ng-class='{true:"curr"}[contentShowIndex==1]' ng-click="contentShowIndex=1">产品参数</li> -->
+    <!-- <li ng-class='{true:"curr"}[contentShowIndex==2]' ng-click="contentShowIndex=2">购买说明</li> -->
+</ul>
+
+<section class="pro-desc" ng-bind-html="proDesc|trustHtml"></section>
+
+<div class="fixed-bottom">
+    <div class="box half-top-border" ng-init="getCartCount()">
+    <!--     <i class="iconfont icon-shoucang"></i> -->
+        <!-- <i class="iconfont icon-collection"></i> -->
+        <i class="iconfont icon-shoppingn" ui-sref="cart.list">
+        <b ng-if="userInfo.cart_count > 0">{{userInfo.cart_count > 99 ? "99+" : userInfo.cart_count}}</b></i>
+        <a class="addToCart-btn half-border" ng-click="addToCart()">加入购物车</a>
+        <a class="buy-btn" ng-click="bug()">立即购买</a>
+    </div>
+</div>
+
+<!-- 以下弹窗遮罩相关 -->
+<div class="bg an-fadeInOut" ng-if="showTarget > 0" ng-click="closeOverlay()"></div>
+
+<div class="overlay pro-param an-slideDown" ng-if="showTarget==1">
+    <i class="iconfont icon-close" ng-click="closeOverlay()"></i>
+    <header>产品参数</header>
+    <div class="line half-top-border" ng-repeat="item in pro.goods_info.goods_attr">
+        <span class="name">{{item.name}}</span>
+        <span class="val">{{item.value}}</span>
+    </div>
+    <div class="action-container half-top-border">
+        <a class="action-btn" ng-click="closeOverlay()">完成</a>
+    </div>
+</div>
+
+<div class="overlay pro-spec an-slideDown" ng-if="showTarget==2">
+    <i class="iconfont icon-close" ng-click="closeOverlay()"></i>
+    <div class="pro-info">
+        <div class="pic-box half-border"><img bt-pic ng-model="pro.spec_info.img"></div>
+        <div class="price">¥ {{pro.goods_info.goods_promotion_price}}</div>
+        <div class="storage">库存 {{pro.goods_info.goods_storage}}件</div>
+    </div>
+
+    <div class="line half-top-border half-bottom-border">
+        <div class="title">{{pro.spec_info.spec_name}}</div>
+        <ul>
+            <li ng-class="{'curr': pro.spec_info.spec_id == spec.id}" ui-sref="product.detail({id: spec.id})" ng-repeat="spec in pro.spec_info.data">{{spec.spec_value}}</li>
+        </ul>
+    </div>
+
+    <div class="line">
+        <div class="title">购买数量</div>
+        <div class="count-box">
+            <i class="iconfont reduce" ng-click="modifyGoodsNum(pro.goods_info.goods_num-1)">&#xe612;</i>
+            <span>{{pro.goods_info.goods_num}}</span>
+            <i class="iconfont add" ng-click="modifyGoodsNum(pro.goods_info.goods_num+1)">&#xe610;</i>
+        </div>
+    </div>
+
+    <div class="action-container half-top-border">
+        <a class="action-btn addToCart-btn half-border" ng-click="addToCart()">加入购物车</a>
+        <a class="action-btn buy-btn" ng-click="bug()">立即购买</a>
+    </div>
+</div>
+
+<div class="overlay store-info an-slideDown" ng-if="showTarget==3">
+    <i class="iconfont icon-close" ng-click="closeOverlay()"></i>
+    <header>店铺详情</header>
+    <div class="line half-top-border">
+        <span class="name">店铺名称</span>
+        <span class="val">{{store_info.store_name}}</span>
+    </div>
+    <div class="line half-top-border">
+        <span class="name">店铺简介</span>
+        <span class="val">{{store_info.store_desc}}</span>
+    </div>
+    <div class="line half-top-border">
+        <span class="name">微信号</span>
+        <span class="val">{{store_info.store_wx}}</span>
+    </div>
+    <div class="line half-top-border">
+        <span class="name">电话</span>
+        <span class="val">{{store_info.store_phone}}</span>
+    </div>
+    <div class="line half-top-border">
+        <span class="name">地址</span>
+        <span class="val">{{store_info.store_address}}</span>
+    </div>
+    <div class="action-container half-top-border">
+        <a class="action-btn" ng-click="closeOverlay()">完成</a>
+    </div>
+</div>
+
+<div ui-view ng-if="$state.is('product.detail.evaluate')" class="silde-wrapper evaluateList-wrapper an-slideRight"></div>

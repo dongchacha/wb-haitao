@@ -1,0 +1,50 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="pro-wrapper my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading">
+	<div class="pro-list">
+		<div class="pro-item" ng-repeat="store in dataList">
+			<header class="half-bottom-border ks-clear">
+				<i class="iconfont" ng-class='{true: "icon-chooses",false:"icon-choosen"}[!!store.checked]' ng-click="checkStore($index)"></i>
+				<a><i class="iconfont icon-storen"></i>{{store.store_name}}</a>
+				<!-- <span></span> -->
+			</header>
+			<div class="section half-bottom-border" ng-repeat="cart in store.cart_list" ui-sref="product.detail({id:cart.goods_id})">
+				<i class="iconfont" ng-class='{true: "icon-chooses",false:"icon-choosen"}[!!cart.checked]' ng-click="checkSingle($event, $parent.$index, $index)"></i>
+				<span class="pic half-border"><img bt-pic ng-model="cart.goods_image_url" /></span>
+				<div class="info-rect">
+					<div class="title">
+						<span>{{cart.goods_name}}</span>
+						<span class="price ks-cPrimary">¥{{Util.toFixed(cart.goods_price * cart.goods_num, 2)}}<!-- <b>x{{cart.goods_num}}</b> --></span>
+					</div>
+					<div class="desc">
+						<span ng-repeat="spec in cart.goods_spec.split(',')">{{spec.split(':')[0]}}<b>{{spec.split(':')[1]}}</b></span>
+					</div>
+					<div class="fTo-bottom ks-clear">
+						<div class="count-box ks-fleft">
+							<i class="iconfont reduce" ng-click="modifyCartCount($event, $parent.$index, $index, cart.goods_num-1)">&#xe612;</i>
+							<span>{{cart.goods_num}}</span>
+							<i class="iconfont add" ng-click="modifyCartCount($event, $parent.$index, $index, cart.goods_num+1)">&#xe610;</i>
+						</div>					
+						<i class="iconfont del ks-fright" ng-click="delPro($event, $parent.$index, $index)">&#xe605;</i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="noData" ng-if="!isLoading&&dataList.length==0">
+	<div class="content">
+		<i class="iconfont icon-shoppingn"></i>
+		<p>购物车空空如也</p>
+		<p>来挑几件好货吧！</p>
+		<a ui-sref="product.list()">随便逛逛</a>
+	</div>
+</div>
+
+<div class="order-stat-container half-top-border ks-clear" ng-if="dataList.length > 0">
+	<span class="chose-box" ng-click="checkAll()"><i class="iconfont" ng-class='{true: "icon-chooses",false:"icon-choosen"}[!!allChecked]'></i>全选</span>
+	<span class="stat">合计: <b>¥ {{Util.toFixed(totalSum, 2)}}</b></span>
+	<a class="settlement" ng-class='{true: "forbid"}[chosedCount==0]' href="javascript:void(0);" ng-click="settlement()">结算</a>
+</div>
+
+<div ng-include="'js/apps/common/views/bottomNav.html'"></div>

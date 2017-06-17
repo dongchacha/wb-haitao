@@ -1,0 +1,29 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<section class="brand-intro">
+	<div class="bg-box"><img class="bt-pic" ng-model="activityInfo.goods_bg" height-fixed /></div>
+	<div class="info-box">
+		<span class="brand-img half-border"><img ng-src="{{activityInfo.goods_img}}" /></span>
+		<h2>{{activityInfo.goods_name}}</h2>
+		<div class="desc">
+			<p>品牌介绍</p>
+			<p>{{activityInfo.desc}}</p>
+		</div>
+	</div>
+</section>
+
+<div class="pro-wrapper2 my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading" is-fixed="false">
+	<div class="pro-list double-col">
+		<div class="pro-item" ng-repeat="pro in dataList">
+			<div class="section" ui-sref="product.detail({id:pro.goods_id})">
+				<span class="pic"><img ng-src="{{pro.goods_image_url}}" /></span>
+				<div class="info-rect">
+					<div class="title">
+						<span>{{pro.goods_name}}</span>
+						<span class="price ks-cPrimary">¥{{Util.toFixed(pro.goods_price, 2)}}<i>¥{{Util.toFixed(pro.goods_marketprice, 2)}}</i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

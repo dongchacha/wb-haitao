@@ -1,0 +1,56 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+<section>
+	<a class="sect-line half-bottom-border" ui-sref="user.setAccount">
+		<i class="iconfont icon-none"></i>
+		<span>账号设置</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="user.modifyMobile">
+		<i class="iconfont icon-p-shouji"></i>
+		<span>更改手机</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+</section>
+
+<section>
+	<a class="sect-line half-bottom-border" ui-sref="bankCard.list">
+		<i class="iconfont icon-tixian"></i>
+		<span>提现账户</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="trade.history({type: 0})">
+		<i class="iconfont icon-lishi"></i>
+		<span>历史交易</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="trade.history({type: 1})">
+		<i class="iconfont icon-lishi"></i>
+		<span>历史提现</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="bankCard.list">
+		<i class="iconfont icon-yinxingqia"></i>
+		<span>我的银行卡</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+</section>
+
+<section style="margin-bottom: 44px;">
+	<a class="sect-line half-bottom-border">
+		<i class="iconfont icon-fenxiao"></i>
+		<span>我的分销</span>
+		<strong ng-click="invite()">邀请</strong>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="distribution.list({level:1})">
+		<i class="iconfont icon-dengji1"></i>
+		<span>一级分销</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="distribution.list({level:2})">
+		<i class="iconfont icon-dengji2"></i>
+		<span>二级分销</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+</section>
+
+<div ng-include="'js/apps/common/views/bottomNav.html'" class=""></div>

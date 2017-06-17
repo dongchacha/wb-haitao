@@ -1,0 +1,20 @@
+{
+    "code": 200,
+    "datas": {
+        "store_info": {
+            "name": "小黄豆",
+            "description": "小黄豆小黄豆小黄豆小黄豆小黄豆小黄豆小黄豆",
+            "avatar": "img/test/car2.jpg",
+            "banner": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+            "phone": "18758255201",
+            "weixin" : "xxxx",
+            "address": {
+                "province": 30,
+                "city": "348",
+                "district": "2504",
+                "detail": "杭州市拱墅区杭行路188号",
+                "zip": "310000"
+            }
+        }
+    }
+}

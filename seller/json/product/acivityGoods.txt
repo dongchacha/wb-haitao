@@ -1,0 +1,41 @@
+{
+    "code": 200,
+    "datas": {
+        "act_bg":"http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+        "act_name":"免费购买",                           
+        "act_id":1,
+        "act_img":"dfasd/dff/df.jpg",
+        "good_cls_list":[
+            {
+                "cls_id":3,
+                "cls_name":"面霜"
+            },
+            {
+                "cls_id":2,
+                "cls_name":"眼霜"
+            }
+        ],
+        "good_cls":3,
+        "good_list":[{
+            "total_num": 233,
+            "page_num":2,
+            "act_goods":[{
+                    "good_id":3,
+                    "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                }
+            ]
+        }]
+    }
+}

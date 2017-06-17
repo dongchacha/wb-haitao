@@ -1,0 +1,14 @@
+{
+	"code":200,
+	"info":"*******",
+	"datas": {
+		"good": 10,
+		"bad": 20,
+		"normal": 30,
+		"all": 40,
+		"good_percent": 75,
+		"bad_percent": 15,
+		"normal_percent":5,
+		"star_average": 4
+	}
+}

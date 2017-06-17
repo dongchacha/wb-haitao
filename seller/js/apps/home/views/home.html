@@ -1,0 +1,52 @@
+<!-- 广告模块 -->
+<section class="adv-module">
+    <div class="advs-container" img-scroll is-init="isPicInit" index="advShowIndex" flexable loop="true">
+		<ul class="pics">
+			<li ng-repeat="item in advList" ng-init="initScroll($last)">
+				<a><img ng-src="{{item.img}}" /></a>
+			</li>
+		</ul>
+        <ul class="sort">
+            <li ng-repeat="item in advList" ng-class="{true:'curr'}[advShowIndex==$index]"></li>
+        </ul>
+    </div>
+</section>
+
+<nav class="category-link-box ks-clear">
+	<a>
+		<i class="iconfont icon-shopping48pxglyph2new"></i>
+		<span>新品推荐</span>
+	</a>
+	<a>
+		<i class="iconfont icon-shopping48pxglyphtag"></i>
+		<span>热卖商品</span>
+	</a>
+</nav>
+
+<section class="recommeds">
+	<!-- <h3>美妆人气推荐</h3> -->
+	<nav class="half-bottom-border">
+		<a ng-repeat="nav in store_propose.good_cls_list" ng-class="{true:'ks-cPrimary'}[$index==0]" ui-sref="category.list({categoryId: nav.cls_id})">{{nav.cls_name}}</a>
+	</nav>
+	<div class="pro-list double-col">
+		<div class="pro-item" ng-repeat="pro in store_propose.prop_goods">
+			<a class="section" ui-sref="product.detail({id:pro.good_id})">
+				<span class="pic"><img ng-src="{{pro.good_img}}" /></span>
+				<div class="info-rect">
+					<div class="title">
+						<span>{{pro.good_brief}}</span>
+						<span class="price ks-cPrimary">¥{{Util.toFixed(pro.good_promotion_price, 2)}}<i>¥{{Util.toFixed(pro.good_price, 2)}}</i></span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div id="pullUp" class="loading">
+		<span class="pullUpIcon" ng-show="pageCount>pagerParams.currentPage+1"></span>
+		<span class="pullUpLabel" ng-if="!isLoading&&pageCount<=pagerParams.currentPage+1">没有更多了</span>
+	</div>
+</section>
+
+<div class="search-wrapper search-key an-slideDown" ng-include="searchRoute.key.tmpUrl" ng-if="searchRoute.key.showState==1" ng-controller="searchRoute.key.controller as vm"></div>
+
+<div ng-include="'js/apps/common/views/bottomNav.html'"></div>

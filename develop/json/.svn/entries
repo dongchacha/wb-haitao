@@ -1,0 +1,123 @@
+10
+
+dir
+142
+svn://chacha@183.136.236.157/CodeServe/haitao/web/develop/json
+svn://chacha@183.136.236.157/CodeServe
+
+
+
+2017-02-13T06:25:28.343750Z
+142
+chacha
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0ef7d29f-9643-664d-a473-eee4862eceb2
+
+product
+dir
+
+fileUpload.txt
+file
+
+
+
+
+2017-03-23T06:48:57.000000Z
+14887c476909ebc5fd032f3b929189ba
+2017-02-13T06:25:28.343750Z
+142
+chacha
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+123
+
+delivery
+dir
+
+address
+dir
+
+evaluate
+dir
+
+success.txt
+file
+
+
+
+
+2017-03-23T06:48:57.000000Z
+bfc34adbb4b30f0891b4db9a476b3c25
+2017-02-13T06:25:28.343750Z
+142
+chacha
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+50
+
+home
+dir
+
+cart
+dir
+
+collection
+dir
+
+order
+dir
+
+user
+dir
+

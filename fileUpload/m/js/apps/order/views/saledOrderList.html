@@ -1,0 +1,64 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="pro-wrapper">
+	<div class="my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading">
+		<div class="pro-list">
+			<div class="pro-item" ng-repeat="order in dataList">
+				<header class="rect half-bottom-border ks-clear">
+					<a>服务编号：{{order.refund_sn}}</a>
+					<span class="ks-cPrimary" ng-if="order.order_state == 0">交易关闭</span>	
+					<span class="ks-cPrimary" ng-if="order.order_state == 10">等待买家付款</span>	
+					<span class="ks-cPrimary" ng-if="order.order_state == 20">买家已付款</span>	
+					<span class="ks-cPrimary" ng-if="order.order_state == 30">卖家已发货</span>	
+					<span class="ks-cPrimary" ng-if="order.order_state == 40">交易成功</span>			
+				</header>
+				<div class="section half-bottom-border" ui-sref="order.saledOrderDetail({refundId: order.refund_id})" ng-init="pro=order">
+					<span class="pic half-border"><img bt-pic ng-model="pro.goods_image_url" /></span>
+					<div class="info-rect">
+						<div class="title">
+							<span>{{pro.goods_name}}</span>
+							<span class="price">¥{{Util.toFixed(pro.goods_price * pro.goods_num, 2)}}<b>x{{pro.goods_num}}</b></span>
+						</div>
+						<div class="desc">
+							<span ng-repeat="spec in pro.goods_spec.split(',')">{{spec.split(':')[0]}}<b>{{spec.split(':')[1]}}</b></span>
+						</div>
+						<div class="fTo-bottom ks-clear">
+							<a class="common-btn ks-fright" ng-if="order.refund_state == 3 && order.goods_state ==1 && order.return_type == 2" ng-click="sendGoods($event, order.refund_id)">发货</a>
+						</div>
+					</div>
+				</div>
+				<div class="rect time-rect">申请时间：{{order.add_time | date:'yyyy-MM-dd hh:mm'}}</div>
+				<div class="rect half-bottom-border action-rect">
+					<!--待付款-->
+					<a class="common-btn" ng-if="order.order_state == 10" ng-click="cancelOrder(order)">取消订单</a>
+					<a class="common-btn ks-cPrimary" ng-if="order.order_state == 10" ng-click="settlement(order)">去结算</a>
+
+					<!--待发货-->	
+
+					<!--待收货-->			
+					<a class="common-btn" ng-if="order.order_state == 30" ng-click="delayReceive(order)">延迟收货</a>
+					<!-- <a class="common-btn" ng-if="order.order_state == 30" ui-sref="delivery.list({orderId: order.order_id})">查看物流</a> -->
+					<a class="common-btn ks-cPrimary" ng-if="order.order_state == 30" ng-click="confirmReceive(order)">确认收货</a>
+
+					<!--待评价-->			
+					<a class="common-btn" ng-if="order.order_state == 40" ng-click="delOrder(order)">删除订单</a>
+					<!-- <a class="common-btn" ng-if="order.order_state == 40" ui-sref="delivery.list({orderId: order.order_id})">查看物流</a> -->
+					<a class="common-btn ks-cPrimary" ng-if="order.order_state == 40 && order.evaluation_state == 0" ui-sref="evaluate.add({orderId: order.order_id})">评价</a>
+					<a class="common-btn ks-cPrimary" ng-if="order.order_state == 40 && order.evaluation_again_state == 0" ui-sref="order.addEveluateAgain({orderId: order.order_id})">追加评价</a>
+
+					<!--交易成功-->
+					<!-- <a class="common-btn" ng-if="order.order_state == 40" ng-click="delOrder(order)">删除订单</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="height: 44px;" ng-if="dataList.length > 0 && pagerParams.state == 1"></div>
+</div>
+
+<div class="noData" ng-if="!isLoading&&dataList.length==0">
+	<div class="content">
+		<i class="iconfont icon-notice"></i>
+		<p>您还没有相应的订单</p>
+		<a ui-sref="product.list()">随便逛逛</a>
+	</div>
+</div>

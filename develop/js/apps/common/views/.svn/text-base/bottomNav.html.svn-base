@@ -1,0 +1,12 @@
+<footer class="bottom-nav half-top-border" ng-init="getCartCount()">
+	<a ui-sref-active="curr" ui-sref="home()">
+		<i class="iconfont"></i>
+	</a>
+	<a ui-sref-active="curr" ui-sref="cart.list()">
+		<i class="iconfont">
+		<b ng-if="userInfo.cart_count > 0">{{userInfo.cart_count > 99 ? "99+" : userInfo.cart_count}}</b></i>
+	</a>
+	<a ui-sref-active="curr" ui-sref="mine.index()">
+		<i class="iconfont"></i>
+	</a>
+</footer>

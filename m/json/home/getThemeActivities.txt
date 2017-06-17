@@ -1,0 +1,210 @@
+{
+	"code":200,
+	"datas": {
+		"store_id": 12,
+		"store_name": "小黄豆的店",
+        "top_activity": [
+            {
+                "act_id":1,
+                "act_img": "http://m.360buyimg.com/mobilecms/jfs/t3001/362/710349934/203758/c43591ff/57adfeb4N690470dc.jpg!q70.jpg",
+                "total_num": 32,
+                "page_num":1,
+                "act_goods":[
+                    {
+                        "good_id":2,
+                        "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                        "good_promotion_price":2222,
+                        "good_price":3422,
+                        "good_brief":"发打范德萨范德萨发dsaf是打发沙发安抚但是发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    }
+                ]  
+            },
+            {
+                "act_id":2,
+                "act_img": "http://m.360buyimg.com/babel/s596x231_jfs/t2743/120/4144771995/196558/35bd82cb/57aa9f5dNc732b1fb.jpg!q70.jpg",
+                "total_num": 32,
+                "page_num":1,
+                "act_goods":[
+                    {
+                        "good_id":2,
+                        "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    },
+                    {
+                        "good_id":3,
+                        "good_img": "http://m.360buyimg.com/mobilecms/jfs/t2734/236/3519880634/25102/4894cf76/5791835aN4f5ecc05.jpg!q70.jpg",
+                        "good_promotion_price":22,
+                        "good_price":33,
+                        "good_brief":"发打发第三方是的是",
+                        "promotion_type": 2
+                    }
+                ]  
+            }
+        ],
+        "store_propose": {
+            "good_cls_list":[
+                {
+                    "cls_id": 3,
+                    "cls_name": "热门"
+                },
+                {
+                    "cls_id": 4,
+                    "cls_name": "面膜眼膜"
+                },
+                {
+                    "cls_id": 2,
+                    "cls_name": "基础护肤"
+                },
+                {
+                    "cls_id": 2,
+                    "cls_name": "面部清洁"
+                },
+                {
+                    "cls_id": 2,
+                    "cls_name": "面部清洁2"
+                },
+                {
+                    "cls_id": 2,
+                    "cls_name": "面部清洁3"
+                },
+                {
+                    "cls_id": 2,
+                    "cls_name": "面部清洁4"
+                },
+                {
+                    "cls_id": 2,
+                    "cls_name": "面部清洁5"
+                }
+            ],
+            "good_cls_id": 4,
+            "total_num":200,
+            "page_num":1,
+            "prop_goods": [
+                {
+                    "good_id":2,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                },
+                {
+                    "good_id":3,
+                    "good_img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_promotion_price":22,
+                    "good_price":33,
+                    "good_brief":"发打发第三方是的是",
+                    "promotion_type": 2
+                }
+            ]
+        }
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"code": 200,
+	"datas": {
+		"brand_list": [{
+			"brand_id": "364",
+			"brand_name": "BH (必艾奇)"
+		}, {
+			"brand_id": "360",
+			"brand_name": "周生生"
+		}]
+	}

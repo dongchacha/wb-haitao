@@ -1,0 +1,17 @@
+{
+	"code": 200,
+	"datas": {
+		"address_id": "7",
+		"member_id": "330743201405018767",
+		"true_name": "小黄豆",
+		"area_id": "2501",
+		"city_id": "348",
+		"province_id": "30",
+		"area_info": "浙江省 杭州市 拱墅区",
+		"address": "秋涛路355号",
+		"tel_phone": null,
+		"mob_phone": "13678904126",
+		"is_default": "0",
+		"dlyp_id": "0"
+	}
+}

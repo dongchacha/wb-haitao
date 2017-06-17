@@ -1,0 +1,5 @@
+D:\CodeServe\haitao\web\fileUpload\bin\fileUpload.dll
+D:\CodeServe\haitao\web\fileUpload\bin\fileUpload.pdb
+D:\CodeServe\haitao\web\fileUpload\obj\Debug\fileUpload.dll
+D:\CodeServe\haitao\web\fileUpload\obj\Debug\fileUpload.pdb
+D:\CodeServe\haitao\web\fileUpload\obj\Debug\fileUpload.csprojResolveAssemblyReference.cache

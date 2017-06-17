@@ -1,0 +1,71 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="state-bar">
+	<p class="state" ng-if="order.refund_process == 1">等待审核</p>		
+	<i class="state-icon icon5" ng-if="order.refund_process == 1"></i>
+
+	<p class="state" ng-if="order.refund_process == 2">等待买家发货</p>		
+	<i class="state-icon icon2" ng-if="order.refund_process == 2"></i>
+
+	<p class="state" ng-if="order.refund_process == 3">等待卖家收货</p>		
+	<i class="state-icon icon3" ng-if="order.refund_process == 3"></i>
+
+	<p class="state" ng-if="order.refund_process == 4">卖家已收货</p>		
+	<i class="state-icon icon4" ng-if="order.refund_process == 4"></i>
+
+	<p class="state" ng-if="order.refund_process == 5">退款中</p>		
+	<i class="state-icon icon6" ng-if="order.refund_process == 5"></i>
+
+	<p class="state" ng-if="order.refund_process == 6">已完成</p>		
+	<i class="state-icon icon4" ng-if="order.refund_process == 6"></i>
+</div>
+
+<section class="refund-info half-bottom-border">
+	服务编号：{{order.refund_sn}}
+</section>
+
+<section class="half-bottom-borde pro-list">
+	<div class="pro-item">
+		<div class="section half-bottom-border" ui-sref="product.detail({id:pro.goods_id})">
+			<span class="pic half-border"><img bt-pic ng-model="pro.goods_image_url" /></span>
+			<div class="info-rect">
+				<div class="title">
+					<span>{{pro.goods_name}}</span>
+					<span class="price">¥{{Util.toFixed(pro.goods_price, 2)}}<b>x{{pro.goods_num}}</b></span>
+				</div>
+				<div class="desc">
+					<span ng-repeat="spec in pro.goods_spec.split(',')">{{spec.split(':')[0]}}<b>{{spec.split(':')[1]}}</b></span>
+				</div>
+			<!-- 	<div class="fTo-bottom ks-clear">
+					<a class="common-btn ks-fright" ng-if="order.order_state == 20 || order.order_state == 30" ng-click="applySaled($event, order.order_id, pro.goods_id)">退款</a>
+					<a class="common-btn ks-fright" ng-if="order.order_state == 40" ng-click="applySaled($event, order.order_id, pro.goods_id)">退款/退货</a>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="connect half-top-border half-bottom-border ks-clear">联系卖家<a class="ks-fright" href="tel:{{order.store_phone}}">{{order.store_phone}}</a></section>
+
+	<section class="seller-address half-top-border half-bottom-border ks-clear">卖家地址<span class="ks-clear"><span class="ks-fright ks-cPrimary">{{order.refund_address}}</span></span></section>
+
+<section class="common half-top-border half-bottom-border ks-clear">
+	问题描述
+	<p class="half-border">
+		{{order.refund_reason}}
+	</p>
+</section>
+
+<section class="common half-top-border half-bottom-border ks-clear" ng-if="order.refund_refuse_reason">
+	审核留言
+	<p class="half-border">
+		{{order.refund_refuse_reason}}
+	</p>
+</section>
+
+<section class="progress half-top-border">
+	<div class="progress-item" ng-repeat="process in progressList">
+		<h4>{{process.date| date:'yyyy-MM-dd hh:mm:ss'}}</h4>
+		<p class="half-bottom-border">{{process.desc}}}</p>
+	</div>
+</section>

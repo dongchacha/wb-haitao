@@ -1,0 +1,126 @@
+{
+    "code": 200,
+    "datas": {
+        "goods_info": {
+            "goods_id": "2",
+            "goods_name": "春装披肩式超短款针织衫开衫女装青鸟黑色",
+            "goods_price": "222",
+            "goods_img": ["http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg", "http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg"],
+            "goods_promotion_price": "120.00",
+            "good_class1": "1",
+            "good_class2": "4",
+            "good_class3": "14",
+            "goods_attr": {
+                "206": {
+                    "attrid": "3050",
+                    "value": "毛衣",
+                    "name": "款式"
+                },
+                "207": {
+                    "attrid": "3064",
+                    "value": "羊毛/羊绒",
+                    "name": "材质"
+                }
+            },
+            "goods_marketprice": "358.00",
+            "goods_serial": "",
+            "transport_id": "0",
+            "transport_title": "",
+            "goods_freight": "0.00",
+            "areaid_1": "1",
+            "areaid_2": "36",
+            "presell_deliverdate": "0",
+            "goods_promotion_type": "2",
+            "goods_click": 14,
+            "goods_sale_num": "3",
+            "goods_collect": "0",
+            "goods_storage": "8",
+            "color_id": "242",
+            "eval_count": "5",
+            "eval_star": "0",
+            "groupbuy_info": null,
+            "promotion_type": "xianshi",
+            "title": "月末折扣",
+            "remark": "月末折扣",
+            "promotion_price": "100.00",
+            "down_price": "29.00",
+            "lower_limit": "2",
+            "cart": true
+        },
+        "spec_info": {
+            "current": "2282",
+            "spec_id": "2282",
+            "spec_name": "颜色",
+            "data": [
+                {
+                    "id": "2281",
+                    "spec_value": "黑色",
+                    "img": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+                    "good_id": "55"
+                },
+                {
+                    "id": "2282",
+                    "spec_value": "红色",
+                    "img": "http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+                    "good_id": "56"
+                },
+                {
+                    "id": "2283",
+                    "spec_value": "绿色",
+                    "img": "http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+                    "good_id": "56"
+                },
+                {
+                    "id": "2284",
+                    "spec_value": "黑色",
+                    "img": "http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+                    "good_id": "56"
+                },
+                {
+                    "id": "2285",
+                    "spec_value": "鹅黄色",
+                    "img": "http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+                    "good_id": "56"
+                }
+            ]
+        }
+    },
+    "gift_array": [],
+    "store_info": {
+        "store_id": "1",
+        "store_name": "niubi",
+        "member_id": "1",
+        "member_name": "jeffrey",
+        "store_phone": "15068881707",
+        "store_wx": "sfdsag",
+        "store_address": "士大夫撒旦法dsaf大师傅dsaf阿斯蒂芬是打发是打发dsaf大师傅dsaf爱迪生撒旦法大是大非",
+        "store_desc": "店铺说明说明",
+        "store_credit": {
+            "store_desc": {
+                "text": "描述",
+                "credit": 5
+            },
+            "store_service": {
+                "text": "服务",
+                "credit": 5
+            },
+            "store_deliver": {
+                "text": "物流",
+                "credit": 5
+            }
+        }
+    },
+    "goods_eval_list": "",
+    "goods_evaluate_info": {
+        "good": 0,
+        "normal": 0,
+        "bad": 0,
+        "all": 0,
+        "img": 0,
+        "good_percent": 100,
+        "normal_percent": 0,
+        "bad_percent": 0,
+        "good_star": 5,
+        "star_average": 5
+    }
+}

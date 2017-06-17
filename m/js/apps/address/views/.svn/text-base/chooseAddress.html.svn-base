@@ -1,0 +1,16 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<ul>
+	<li ng-repeat="address in dataList">
+		<div class="main-rect" ng-click="choose(address)">
+			<p class="ks-clear">{{address.true_name}}<span class="ks-fright">{{address.mob_phone}}</span></p>
+			<p><span ng-if="address.is_default==1">默认地址</span>{{address.area_info}} {{address.address}}</p>
+
+			<i class="iconfont" ng-class="{true: 'ks-cPrimary icon-chooses', false: 'icon-choosen'}[chosedId == address.address_id || (!chosedId && chosedAddress.address_id == address.address_id)]"></i>
+		</div>
+	</li>
+</ul>
+
+<div class="fixed-bottom">
+	<a class="action-btn" ui-sref="order.confirm.addAddress()">添加收货地址</a>
+</div>

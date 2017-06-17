@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCFE4444-1FAE-4987-826D-D4A52692C1BB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fileUpload</RootNamespace>
+    <AssemblyName>fileUpload</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="m\css\base.min.css" />
+    <Content Include="m\css\iconfont\demo.css" />
+    <Content Include="m\css\iconfont\demo.html" />
+    <Content Include="m\css\iconfont\iconfont.css" />
+    <Content Include="m\css\iconfont\iconfont.svg" />
+    <Content Include="m\css\index.min.css" />
+    <Content Include="m\css\mixin.min.css" />
+    <Content Include="m\css\variables.min.css" />
+    <Content Include="m\img\add-pic.png" />
+    <Content Include="m\img\del-btn%403x.png" />
+    <Content Include="m\img\del-btn.png" />
+    <Content Include="m\img\header-bg.png" />
+    <Content Include="m\img\image%403x.png" />
+    <Content Include="m\img\image.png" />
+    <Content Include="m\img\image_1%402x.png" />
+    <Content Include="m\img\image_1%403x.png" />
+    <Content Include="m\img\image_2%402x.png" />
+    <Content Include="m\img\image_2%403x.png" />
+    <Content Include="m\img\image_3%402x.png" />
+    <Content Include="m\img\image_3%403x.png" />
+    <Content Include="m\img\image_4%402x.png" />
+    <Content Include="m\img\image_4%403x.png" />
+    <Content Include="m\img\image_5%402x.png" />
+    <Content Include="m\img\image_5%403x.png" />
+    <Content Include="m\img\image_6%402x.png" />
+    <Content Include="m\img\image_6%403x.png" />
+    <Content Include="m\img\moren.png" />
+    <Content Include="m\img\test\activity1.png" />
+    <Content Include="m\img\test\activity2.png" />
+    <Content Include="m\img\test\activity3.png" />
+    <Content Include="m\img\test\car1.png" />
+    <Content Include="m\img\test\car2.jpg" />
+    <Content Include="m\img\test\index-banner1.png" />
+    <Content Include="m\img\test\index-banner2.png" />
+    <Content Include="m\index.html" />
+    <Content Include="m\json\address\addressDetail.txt" />
+    <Content Include="m\json\address\defaultAddress.txt" />
+    <Content Include="m\json\address\myAddress.txt" />
+    <Content Include="m\json\cart\getCartCount.txt" />
+    <Content Include="m\json\cart\getProlist.txt" />
+    <Content Include="m\json\collection\collectionList.txt" />
+    <Content Include="m\json\delivery\getDeliveryInfo.txt" />
+    <Content Include="m\json\evaluate\getEvaluateList.txt" />
+    <Content Include="m\json\evaluate\getEvaluateStat.txt" />
+    <Content Include="m\json\fileUpload.txt" />
+    <Content Include="m\json\home\getCategoryAndBrand.txt" />
+    <Content Include="m\json\home\getThemeActivities.txt" />
+    <Content Include="m\json\order\expressList.txt" />
+    <Content Include="m\json\order\orderDetail.txt" />
+    <Content Include="m\json\order\orderList.txt" />
+    <Content Include="m\json\order\saledOrderDetail.txt" />
+    <Content Include="m\json\order\saledOrderList.txt" />
+    <Content Include="m\json\order\saledProgress.txt" />
+    <Content Include="m\json\product\acivityGoods.txt" />
+    <Content Include="m\json\product\brandCategory.txt" />
+    <Content Include="m\json\product\brandGoods.txt" />
+    <Content Include="m\json\product\country.txt" />
+    <Content Include="m\json\product\productDetail-old.txt" />
+    <Content Include="m\json\product\productDetail.txt" />
+    <Content Include="m\json\product\productIntro.txt" />
+    <Content Include="m\json\product\productList.txt" />
+    <Content Include="m\json\success.txt" />
+    <Content Include="m\json\user\getUserInfo.txt" />
+    <Content Include="m\js\app.js" />
+    <Content Include="m\js\apps\address\controllers\chooseAddress.js" />
+    <Content Include="m\js\apps\address\controllers\edit.js" />
+    <Content Include="m\js\apps\address\controllers\myAddress.js" />
+    <Content Include="m\js\apps\address\views\chooseAddress.html" />
+    <Content Include="m\js\apps\address\views\edit.html" />
+    <Content Include="m\js\apps\address\views\myAddress.html" />
+    <Content Include="m\js\apps\cart\controllers\list.js" />
+    <Content Include="m\js\apps\cart\views\list.html" />
+    <Content Include="m\js\apps\collection\controllers\list.js" />
+    <Content Include="m\js\apps\collection\views\list.html" />
+    <Content Include="m\js\apps\common\controllers\chosePayStyle.js" />
+    <Content Include="m\js\apps\common\views\bottomNav.html" />
+    <Content Include="m\js\apps\common\views\chosePayStyle.html" />
+    <Content Include="m\js\apps\common\views\headerNav.html" />
+    <Content Include="m\js\apps\common\views\noLogin.html" />
+    <Content Include="m\js\apps\delivery\controllers\list.js" />
+    <Content Include="m\js\apps\delivery\views\list.html" />
+    <Content Include="m\js\apps\evaluate\controllers\add.js" />
+    <Content Include="m\js\apps\evaluate\controllers\additional.js" />
+    <Content Include="m\js\apps\evaluate\controllers\list.js" />
+    <Content Include="m\js\apps\evaluate\views\add.html" />
+    <Content Include="m\js\apps\evaluate\views\list.html" />
+    <Content Include="m\js\apps\home\controllers\home.js" />
+    <Content Include="m\js\apps\home\views\home.html" />
+    <Content Include="m\js\apps\order\controllers\buyerSendGoods.js" />
+    <Content Include="m\js\apps\order\controllers\orderConfirm.js" />
+    <Content Include="m\js\apps\order\controllers\orderDetail.js" />
+    <Content Include="m\js\apps\order\controllers\orderList.js" />
+    <Content Include="m\js\apps\order\controllers\saledAplay.js" />
+    <Content Include="m\js\apps\order\controllers\saledOrderDetail.js" />
+    <Content Include="m\js\apps\order\controllers\saledOrderList.js" />
+    <Content Include="m\js\apps\order\controllers\saledQuery.js" />
+    <Content Include="m\js\apps\order\views\buyerSendGoods.html" />
+    <Content Include="m\js\apps\order\views\orderConfirm.html" />
+    <Content Include="m\js\apps\order\views\orderDetail.html" />
+    <Content Include="m\js\apps\order\views\orderList.html" />
+    <Content Include="m\js\apps\order\views\saledAplay.html" />
+    <Content Include="m\js\apps\order\views\saledOrderDetail.html" />
+    <Content Include="m\js\apps\order\views\saledOrderList.html" />
+    <Content Include="m\js\apps\order\views\saledQuery.html" />
+    <Content Include="m\js\apps\product\controllers\activity.js" />
+    <Content Include="m\js\apps\product\controllers\brand.js" />
+    <Content Include="m\js\apps\product\controllers\detail.js" />
+    <Content Include="m\js\apps\product\controllers\list.js" />
+    <Content Include="m\js\apps\product\controllers\searchKey.js" />
+    <Content Include="m\js\apps\product\controllers\searchMultiple.js" />
+    <Content Include="m\js\apps\product\views\activity.html" />
+    <Content Include="m\js\apps\product\views\brand.html" />
+    <Content Include="m\js\apps\product\views\detail.html" />
+    <Content Include="m\js\apps\product\views\list.html" />
+    <Content Include="m\js\apps\product\views\searchKey.html" />
+    <Content Include="m\js\apps\product\views\searchMultiple.html" />
+    <Content Include="m\js\apps\user\controllers\login.js" />
+    <Content Include="m\js\apps\user\controllers\mine.js" />
+    <Content Include="m\js\apps\user\controllers\mobileLogin.js" />
+    <Content Include="m\js\apps\user\controllers\perfectPwd.js" />
+    <Content Include="m\js\apps\user\controllers\reg.js" />
+    <Content Include="m\js\apps\user\views\login.html" />
+    <Content Include="m\js\apps\user\views\mine.html" />
+    <Content Include="m\js\apps\user\views\mobileLogin.html" />
+    <Content Include="m\js\apps\user\views\perfectPwd.html" />
+    <Content Include="m\js\apps\user\views\reg.html" />
+    <Content Include="m\js\config.min.js" />
+    <Content Include="m\js\directives\directiveModule.js" />
+    <Content Include="m\js\directives\fileUpload.js" />
+    <Content Include="m\js\global.min.js" />
+    <Content Include="m\js\route.js" />
+    <Content Include="m\js\services\addressService.js" />
+    <Content Include="m\js\services\buyerSendGoodsService.js" />
+    <Content Include="m\js\services\cartService.js" />
+    <Content Include="m\js\services\collectService.js" />
+    <Content Include="m\js\services\deliveryService.js" />
+    <Content Include="m\js\services\evaluateService.js" />
+    <Content Include="m\js\services\homeService.js" />
+    <Content Include="m\js\services\orderService.js" />
+    <Content Include="m\js\services\productService.js" />
+    <Content Include="m\js\services\serviceModule.js" />
+    <Content Include="m\js\services\userService.js" />
+    <Content Include="m\js\services\wxService.js" />
+    <Content Include="m\lib\angular-myScroll.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-animate.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-animate.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-aria.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-aria.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-cookies.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-cookies.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-csp.css" />
+    <Content Include="m\lib\angular\1.5.6\angular-loader.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-loader.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-message-format.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-message-format.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-messages.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-messages.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-mocks.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-parse-ext.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-parse-ext.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-resource.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-resource.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-route.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-route.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-sanitize.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-sanitize.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-scenario.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-touch.js" />
+    <Content Include="m\lib\angular\1.5.6\angular-touch.min.js" />
+    <Content Include="m\lib\angular\1.5.6\angular.js" />
+    <Content Include="m\lib\angular\1.5.6\angular.min.js" />
+    <Content Include="m\lib\angular\angular-ui\angular-ui-router.js" />
+    <Content Include="m\lib\angular\angular-ui\angular-ui-router.min.js" />
+    <Content Include="m\lib\angular\ui-bootstrap-tpls.js" />
+    <Content Include="m\lib\angular\ui-bootstrap-tpls.min.js" />
+    <Content Include="m\lib\hammer.min.js" />
+    <Content Include="m\lib\imgScroll.min.js" />
+    <Content Include="m\lib\iscroll\iscroll.js" />
+    <Content Include="m\lib\iscroll\loading.gif" />
+    <Content Include="m\lib\iscroll\pull-icon%402x.png" />
+    <Content Include="m\lib\iscroll\refreshArrow%403x.png" />
+    <Content Include="m\lib\iscroll\refreshArrow.png" />
+    <Content Include="m\lib\iscroll\scrollbar.css" />
+    <Content Include="m\lib\iscroll\scrollbar.png" />
+    <Content Include="m\lib\jquery.md5.js" />
+    <Content Include="m\lib\jquery.min.js" />
+    <Content Include="m\lib\myScroll.min.js" />
+    <Content Include="m\lib\overlay\alert-icon-faild.png" />
+    <Content Include="m\lib\overlay\alert-icon-success.png" />
+    <Content Include="m\lib\overlay\base.min.js" />
+    <Content Include="m\lib\overlay\close.png" />
+    <Content Include="m\lib\overlay\confirm.min.js" />
+    <Content Include="m\lib\overlay\dialog.min.js" />
+    <Content Include="m\lib\overlay\failT%403x.png" />
+    <Content Include="m\lib\overlay\failT.png" />
+    <Content Include="m\lib\overlay\loading-icon.gif" />
+    <Content Include="m\lib\overlay\loading.gif" />
+    <Content Include="m\lib\overlay\loading.min.js" />
+    <Content Include="m\lib\overlay\loading.png" />
+    <Content Include="m\lib\overlay\overlay.min.css" />
+    <Content Include="m\lib\overlay\say.min.js" />
+    <Content Include="m\lib\overlay\sucsessT%403x.png" />
+    <Content Include="m\lib\overlay\sucsessT.png" />
+    <Content Include="m\lib\overlay\tip.min.js" />
+    <Content Include="m\lib\photoSwipe\photoSwipe.min.css" />
+    <Content Include="m\lib\photoSwipe\photoSwipe.min.js" />
+    <Content Include="m\lib\province-data.js" />
+    <Content Include="m\lib\require.js" />
+    <Content Include="m\lib\require\require.min.js" />
+    <Content Include="m\lib\require\text.min.js" />
+    <Content Include="m\lib\tween.min.js" />
+    <Content Include="m\lib\underscore.js" />
+    <Content Include="m\lib\util.min.js" />
+    <Content Include="m\lib\zepto.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="upload.ashx.cs">
+      <DependentUpon>upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="upload.ashx" />
+    <Content Include="m\css\base.less" />
+    <Content Include="m\css\iconfont\iconfont.eot" />
+    <Content Include="m\css\iconfont\iconfont.ttf" />
+    <Content Include="m\css\iconfont\iconfont.woff" />
+    <Content Include="m\css\index.less" />
+    <Content Include="m\css\mixin.less" />
+    <Content Include="m\css\variables.less" />
+    <Content Include="m\lib\angular\1.5.6\angular-animate.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-aria.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-cookies.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-loader.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-message-format.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-messages.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-parse-ext.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-resource.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-route.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-sanitize.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular-touch.min.js.map" />
+    <Content Include="m\lib\angular\1.5.6\angular.min.js.map" />
+    <Content Include="m\lib\overlay\overlay.less" />
+    <Content Include="m\lib\photoSwipe\photoSwipe.min.less" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:29257/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

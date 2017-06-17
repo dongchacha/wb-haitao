@@ -1,0 +1,48 @@
+{
+    "code": 200,
+    "datas": {
+        "goods_list":[{
+            "goods_id":2,
+            "goods_image_url":"http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+            "goods_promotion_price": 22,
+            "goods_price":33,
+            "goods_brief": "范德萨范德萨范德萨发第三方大师傅沙发是的阿萨德打算是打发啊多少是打发大师傅打分撒旦法撒旦的是",
+            "promotion_type": 2
+        }, {
+            "goods_id":23,
+            "goods_image_url":"http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+            "goods_promotion_price": 22,
+            "goods_price":33,
+            "goods_brief": "你好地方两地分居",
+            "promotion_type": 2
+        }, {
+            "goods_id":23,
+            "goods_image_url":"http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+            "goods_promotion_price": 22,
+            "goods_price":33,
+            "goods_brief": "你好地方两地分居",
+            "promotion_type": 2
+        }, {
+            "goods_id":2,
+            "goods_image_url":"http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+            "goods_promotion_price": 22,
+            "goods_price":33,
+            "goods_brief": "你好地方两地分居",
+            "promotion_type": 2
+        }, {
+            "goods_id":2,
+            "goods_image_url":"http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+            "goods_promotion_price": 22,
+            "goods_price":33,
+            "goods_brief": "你好地方两地分居",
+            "promotion_type": 2
+        }, {
+            "goods_id":23,
+            "goods_image_url":"http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+            "goods_promotion_price": 22,
+            "goods_price":33,
+            "goods_brief": "你好地方两地分居",
+            "promotion_type": 2
+        }]
+    }
+}

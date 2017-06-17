@@ -1,0 +1,7 @@
+	<div class="login-wrapper">
+        <div class="login-prompt">
+            <div class="icon"></div>
+            <p>抱歉，您还没有登录...</p>
+            <a href="javascript:wv.openPage('/system/login', 0);">登录</a>
+        </div>
+    </div>	

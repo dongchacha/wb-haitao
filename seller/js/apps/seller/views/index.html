@@ -1,0 +1,65 @@
+<header>
+	<div class="top-bar">
+		<span class="store-name">{{info.name}}</span>
+		<img ng-src="{{info.avatar}}">
+	</div>
+	<p class="profit-title">总收益(元)</p>
+	<p class="profit-amount">{{Util.toFixed(info.income, 2)}}</p>
+	<ul class="bottom-bar ks-clear">
+		<li>
+			<p>{{Util.toFixed(info.today, 2)}}</p>
+			<p>今日销售</p>
+		</li>
+		<li>
+			<p>{{Util.toFixed(info.week, 2)}}</p>
+			<p>7日收益</p>
+		</li>
+		<li>
+			<p>{{info.vistors}}</p>
+			<p>访问数</p>
+		</li>
+	</ul>
+</header>
+
+<section class="main-nav" style="margin-bottom: 44px;">
+	<ul class="ks-clear">
+		<li class="half-bottom-border half-right-border" ui-sref="order.orderList">
+			<div class="box1">
+				<img src="./img/seller-nav1.png">
+			</div>
+			<div class="box2">
+				<p>订单管理</p>
+				<!-- <p>已有40个订单</p> -->
+			</div>
+		</li>
+		<li class="half-bottom-border" ui-sref="customer.list">
+			<div class="box1">
+				<img src="./img/seller-nav2.png">
+			</div>
+			<div class="box2">
+				<p>客户管理</p>
+				<!-- <p>已有40个客户</p> -->
+			</div>
+		</li>
+		<li class="half-bottom-border half-right-border" ui-sref="store.index">
+			<div class="box1">
+				<img src="./img/seller-nav3.png">
+			</div>
+			<div class="box2">
+				<p>店铺管理</p>
+				<!-- <p>资料未设置</p> -->
+			</div>
+		</li>
+		<li class="half-bottom-border" ui-sref="seller.profit">
+			<div class="box1">
+				<img src="./img/seller-nav4.png">
+			</div>
+			<div class="box2">
+				<p>我的收益</p>
+				<!-- <p>收入0.00元</p> -->
+			</div>
+		</li>
+	</ul>
+</section>
+
+<div ng-include="'js/apps/common/views/bottomNav.html'"></div>

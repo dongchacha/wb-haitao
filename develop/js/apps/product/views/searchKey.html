@@ -1,0 +1,14 @@
+<header class="search-header half-bottom-border">
+    <form class="search-box" ng-submit="vm.submitSearch(vm.queryKey)">
+    	<i class="iconfont icon-sousuo"></i><input ng-model="vm.queryKey"  placeholder="搜索商品或品牌" />
+    	<b class="del-btn" ng-show="vm.queryKey" ng-click="vm.queryKey=''"></b>
+    </form>
+    <a class="cancel right" ng-click="vm.cancelSearch()" href="javascript:void(0);">取消</a>
+</header>
+
+<section class="search-history scroll-box" ng-if="vm.historyData.length" ng-init="vm.bindHandlerLister()">
+	<header>最近搜索<i class="iconfont icon-detele" ng-click="vm.clearHistory()"></i></header>
+	<div class="key-list">
+		<a ng-repeat="item in vm.historyData" class="half-border" ng-click="vm.submitSearch(item)">{{item}}</a>
+	</div>
+</section>

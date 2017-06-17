@@ -1,0 +1,67 @@
+/**
+ *  全局常量配置
+ *  @Name AshaLiu
+ *  @Date 2016-5-9
+ */
+
+
+/* 主色调 */
+@primaryColorRed:   #FF403E;
+
+/* 网站默认背景颜色 */
+@bgLightWhite:     #EFEFF4;
+@bgWhite:          #fff;
+
+/* 分割线 */
+@splitDarkGray:    #c7c7c7;
+@splitLightGray:   #e2e2e2;
+
+/* 文字颜色 */
+@fontColorBlack:       #000;
+@fontColorDeepBlack:   #333;
+@fontColorDarkBlack:   #444;
+@fontColorLightBlack:  #666;
+@fontColorGray:        #999;
+@fontColorRed:         @primaryColorRed;
+
+/* 链接色 */
+@colorLink: @primaryColorRed; 
+@colorLinkActive: darken(@colorLink, 10%);
+
+/* 字体大小 */
+@fontSize12:    12px;
+@fontSize14:    14px;
+@fontSize15:    15px;
+@fontSize16:    16px;
+@fontSize17:    17px;
+@fontSize18:    18px;
+
+/* 字体粗度 */
+@fontWeight:          500;
+@fontWeightLight:     400;
+
+//顶部和底部的高度
+@barBaseHeight:    44px;
+@barTabHeight:    44px;
+
+/* 顶部通栏的侧边空白 */
+@barSideSpacing:    12px;
+
+/* 内容区域的侧边空白 */
+@contentSideSpacing:    12px;
+
+/* 边框的默认值 */
+@borderDefaultWidth: 1px;
+@borderDefaultColor: @splitLightGray;
+@border-default: @borderDefaultWidth solid @borderDefaultColor;
+
+/* 网站默认图片路径前嵌 */
+@imgBaseUrl:            "../img/";
+
+/* 默认的变量 */
+@fontFamilyDefault:   "Helvetica Neue", Helvetica, sans-serif;
+@fontSizeDefault:     @fontSize16;
+@fontColorDefault:    @fontColorDeepBlack;
+@bgColorDefault:      @bgLightWhite;
+
+

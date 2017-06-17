@@ -1,0 +1,30 @@
+	<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+	
+	<section class="half-bottom-border">
+		<p class="amount ks-clear">
+			<span class="name">收益金额</span>
+			<span class="val" ng-class="{true:'add'}[info.type=='2']">{{info.type=="2"?"+":"-"}}{{Util.toFixed(info.amount,2)}}</span>
+		</p>
+	</section>
+	<section class="half-bottom-border">
+		<p class="ks-clear">
+			<span class="name">类  型</span>
+			<span class="val">{{info.type=="1"?"提现":"收益"}}</span>
+		</p>
+		<p class="ks-clear">
+			<span class="name">时  间</span>
+			<span class="val">{{info.add_time * 1000 | date:'yyyy-MM-dd hh:mm'}}</span>
+		</p>
+		<p class="ks-clear">
+			<span class="name">交易单号</span>
+			<span class="val">{{info.sn}}</span>
+		</p>
+		<p class="ks-clear">
+			<span class="name">状  态</span>
+			<span class="val">{{info.state==2?"已完成":"进行中"}}</span>
+		</p>
+		<p class="ks-clear" ng-if="info.type==1&&info.bank_no">
+			<span class="name">提现银行卡</span>
+			<span class="val">{{info.bank_no}}</span>
+		</p>
+	</section>

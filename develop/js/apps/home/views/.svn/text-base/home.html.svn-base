@@ -1,0 +1,84 @@
+<!-- 广告模块 -->
+<section class="adv-module">
+    <div class="search-box ks-clear">
+    	<i class="iconfont icon-sousuo"></i><input placeholder="搜索商品或品牌" ng-model="pagerParams.queryKey" readonly="readonly" ng-click="openSearch('key')"/>
+    </div>
+    <div class="advs-container" img-scroll is-init="isPicInit" index="advShowIndex" flexable loop="true">
+		<ul class="pics">
+			<li ng-repeat="item in advList" ng-init="initScroll($last)">
+				<a><img ng-src="{{item.img}}" /></a>
+			</li>
+		</ul>
+        <ul class="sort">
+            <li ng-repeat="item in advList" ng-class="{true:'curr'}[advShowIndex==$index]"></li>
+        </ul>
+    </div>
+</section>
+
+<nav class="category-box ks-clear">
+	<a ng-repeat="item in categoryList" ui-sref="product.category({categoryId: item.cls_id})">
+		<i class="iconfont icon-{{item.cls_icon}}"></i>
+		<span>{{item.cls_name}}</span>
+	</a>
+</nav>
+
+<section class="hot-brand">
+	<h3>热门品牌</h3>
+	<nav class="ks-clear">
+		<a ng-repeat="item in hotBrand" ui-sref="brand({brandId: item.brand_id})">
+			<div class="img-link"><img ng-src="{{item.brand_pic}}"></div>
+			<div class="info">
+				<p class="name">{{item.brand_name}}</p>
+				<p class="desc">{{item.brand_brief}}</p>
+			</div>
+		</a>
+	</nav>
+</section>
+
+<section class="activities">
+	<h3>精选活动</h3>
+	<div class="acitivty-item" ng-repeat="item in activitiesList">
+		<a class="act-img-link" ui-sref="activity({activityId:item.act_id})">
+			<img ng-src="{{item.act_img}}">
+		</a>
+		<div class="goods-box">
+			<ul class="ks-clear" style="width: {{item.act_goods.length * 100}}px">
+				<li ng-repeat="goods in item.act_goods">
+					<a ui-sref="product.detail({id: item.good_id})">
+						<div class="img-link"><img bt-pic ng-model="goods.good_img"></div>
+						<div class="name">{{goods.good_brief}}</div>
+						<span class="price ks-cPrimary">¥{{Util.toFixed(goods.good_promotion_price, 2)}}<i>¥{{Util.toFixed(goods.good_price, 2)}}</i></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="recommeds">
+	<h3>美妆人气推荐</h3>
+	<nav class="half-bottom-border">
+		<a ng-repeat="nav in store_propose.good_cls_list" ng-class="{true:'ks-cPrimary'}[$index==0]" ui-sref="category.list({categoryId: nav.cls_id})">{{nav.cls_name}}</a>
+	</nav>
+	<div class="pro-list double-col">
+		<div class="pro-item" ng-repeat="pro in store_propose.prop_goods">
+			<a class="section" ui-sref="product.detail({id:pro.good_id})">
+				<span class="pic"><img ng-src="{{pro.good_img}}" /></span>
+				<div class="info-rect">
+					<div class="title">
+						<span>{{pro.good_brief}}</span>
+						<span class="price ks-cPrimary">¥{{Util.toFixed(pro.good_promotion_price, 2)}}<i>¥{{Util.toFixed(pro.good_price, 2)}}</i></span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div id="pullUp" class="loading">
+		<span class="pullUpIcon" ng-show="pageCount>pagerParams.currentPage+1"></span>
+		<span class="pullUpLabel" ng-if="!isLoading&&pageCount<=pagerParams.currentPage+1">没有更多了</span>
+	</div>
+</section>
+
+<div class="search-wrapper search-key an-slideDown" ng-include="searchRoute.key.tmpUrl" ng-if="searchRoute.key.showState==1" ng-controller="searchRoute.key.controller as vm"></div>
+
+<div ng-include="'js/apps/common/views/bottomNav.html'"></div>

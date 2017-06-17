@@ -1,0 +1,36 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="wrapper form-wrapper">
+    <form class="gForm" name="J_Form" novalidate>
+        <div class="form-item half-bottom-border">
+            <span class="left">户名</span>
+            <span class="main">
+                <input type="text" required placeholder="请填写您本人的真实姓名" ng-model="model.bank_user" />
+            </span>
+        </div>
+
+        <div class="form-item mobile-item half-bottom-border">
+            <span class="left">选择银行</span>
+            <span class="main" ui-sref="bankCard.add.choseBank">
+                <input type="text" required placeholder="请选择银行" ng-model="chosedBank.bank_id" readonly="readonly" style="text-align: right;" ng-show="!chosedBank" />
+                <span class="bank-info" ng-if="chosedBank">
+                    <img ng-src="{{chosedBank.url}}"/>
+                    <span>{{chosedBank.bank_name}}</span>
+                </span>
+            </span>
+            <i class="iconfont icon-arrow"></i>
+        </div>
+
+        <div class="form-item half-bottom-border">
+            <span class="left">卡号</span>
+            <span class="main">
+                <input type="number" required placeholder="请填写您本人的银行卡信息" ng-model="model.card_num" />
+            </span>
+        </div>
+    </form>
+    <div class="action-container">
+        <a class="action-btn" ng-disabled="true" ng-class='{true: "forbid"}[J_Form.$invalid]' ng-click="submit()">同意绑定</a>
+    </div>
+</div>
+
+<div ui-view ng-if="$state.is('bankCard.add.choseBank')" class="silde-wrapper bankCard-wrapper choseBank-wrapper an-slideRight"></div>

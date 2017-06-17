@@ -1,0 +1,51 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="eval-stat">
+	<span>小伙伴评价</span>
+	<span class="star">
+		<i class="iconfont ks-cPrimary" ng-repeat="i in [1,2,3,4,5]" ng-class='{true: "icon-starts", false: "icon-start"}[statInfo.star_average >= i]'></i>
+	</span>
+	<span class="total">{{statInfo.good_percent}}% 好评</span>
+</div>
+
+<ul class="nav half-bottom-border">
+	<li ng-class="{true:'curr'}[pagerParams.type==0]" ng-click="changeType(0)">全部({{statInfo.all || 0}})</li>
+	<li ng-class="{true:'curr'}[pagerParams.type==1]" ng-click="changeType(1)">好评({{statInfo.good || 0}})</li>
+	<li ng-class="{true:'curr'}[pagerParams.type==2]" ng-click="changeType(2)">中评({{statInfo.normal || 0}})</li>
+	<li ng-class="{true:'curr'}[pagerParams.type==3]" ng-click="changeType(3)">差评({{statInfo.bad || 0}})</li>
+</ul>
+
+<div class="data-wrapper my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading">
+	<div class="data-list">
+		<div class="data-item half-bottom-border" ng-repeat="item in dataList">
+			<div class="user">
+				<span class="header-pic"><i class="iconfont icon-nones"></i><img ng-src="{{item.geval_head}}" /></span>
+				<span class="user-name">{{item.geval_frommembername}}</span>
+			</div>
+			<div class="comment">{{item.geval_content}}</div>
+			<div class="date">{{item.geval_addtime * 1000 | date:'yyyy-MM-dd'}}</div>
+			<ul class="pics" pic-preview targets="li">
+				<li ng-repeat="pic in item.geval_image.split(',')" class="half-border">
+					<img bt-pic ng-model="pic">
+				</li>
+			</ul>
+			<div class="explain" ng-if="item.geval_explain">
+				<b></b>
+				{{item.geval_explain}}
+			</div>
+			<div ng-if="item.geval_content_again" class="again">
+				<div class="again_time">{{getAgainDay(item.geval_addtime, item.geval_addtime_again-item)}}</div>
+				<div class="comment">{{item.geval_content_again}}</div>
+				<ul class="pics" pic-preview targets="li">
+					<li ng-repeat="pic in item.geval_image_again.split(',')" class="half-border">
+						<img bt-pic ng-model="pic">
+					</li>
+				</ul>
+				<div class="explain" ng-if="item.geval_explain_again">
+					<b></b>
+					{{item.geval_explain_again}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

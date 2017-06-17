@@ -1,0 +1,94 @@
+/**
+ * 手机端图片放大和切换
+ *
+ * @author xiaochai.dong@guanxin.com
+ * @since 2015-01-30
+ */
+.photoSwipe-layer{
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:9998;
+	background:#000;
+	width:100%;
+	overflow:hidden;
+	font-size:0;
+	.item-list{
+		position:absolute;
+		top:0;
+		list-style:none;
+		padding:0;
+		display: table;
+		ul{
+			width: 100%;
+			height: 100%;
+			display: table-row;
+			li{
+				height: 100%;
+				float: left;
+				display: block;//table-cell;
+				vertical-align: top;//middle;
+				position:relative;
+				list-style:none;
+				// display:inline-block;
+				text-align: center;
+				overflow:scroll;
+				-webkit-overflow-scrolling: touch;
+				// >div{
+				// 	width: 100%;
+				// 	height: 100%;
+				// 	overflow:scroll;
+				// 	-webkit-overflow-scrolling: touch;
+				// }
+				img{
+					transition: transform .2s linear, -webkit-transform .2s linear, width .2s linear,height .2s linear,max-width .2s linear,max-height .2s linear;
+					// position:absolute;
+					max-width:100%;
+					max-height:100%;
+					margin:0 auto;
+					border:0 none;
+					display:block;
+					/*margin: 0 auto;*/
+				}
+			}
+		}
+	}
+
+	/* 点 */
+	.icon-list{
+		position:absolute;
+	    font-size: 20px;
+	    color: #fff;
+	}
+	.icon-list i{
+		display:inline-block;
+		width:8px;
+		height:8px;
+		border-radius:8px;
+		background:#FFF;
+		margin-right:5px;
+	}
+	.icon-list i.current{
+		background:#484343;
+	}
+}
+
+.photoSwiper-tmpContainer{
+	position:fixed;
+	z-index: 9999;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background:#000;
+
+    // display: table-cell;
+    // text-align: center;
+    // vertical-align: middle;
+				// overflow:scroll;
+				// -webkit-overflow-scrolling: touch;
+	/*transition: background-color .5ms ease;*/
+	img{
+		position:absolute;
+	}
+}

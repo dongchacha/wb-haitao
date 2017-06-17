@@ -1,0 +1,55 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<form class="bt-form" name="J_Form" novalidate>
+    <div class="form-item half-bottom-border">
+        <span class="item-name">快递公司</span>
+		<span class="item-place">
+			<input ng-model="model.e_name" readonly="readonly" placeholder="请选择快递"/>
+			<select ng-model="model.express_id" required ng-change="expressChange()" ng-options="obj.id as obj.e_name for obj in expresses"></select>
+			<i class="iconfont icon-arrow"></i>
+		</span>
+    </div>
+	<!-- <div class="form-item half-bottom-border" ng-show="flags.showExpressName">
+		<span class="item-name">快递公司名称</span>
+		<span class="item-place">
+			<input type="text"  required ng-model="model.expressName" placeholder="请填写快递公司" />
+		</span>
+	</div> -->
+    <div class="form-item half-bottom-border">
+        <span class="item-name">快递单号</span>
+		<span class="item-place">
+			<input type="text" required ng-model="model.invoice_no" placeholder="请填写快递单号" />
+		</span>
+    </div>
+	<!--
+    <div class="form-item half-bottom-border" >
+        <span class="item-name">收件人</span>
+		<span class="item-place">
+			<input type="text"  ng-model="model.addressee" placeholder="请填写收件人" />
+		</span>
+    </div>
+    <div class="form-item half-bottom-border" >
+        <span class="item-name">手机号码</span>
+		<span class="item-place">
+			<input type="tel"  required ng-model="model.phone" placeholder="请填写收件人手机号码" />
+		</span>
+    </div>
+    <div class="form-item half-bottom-border">
+        <span class="item-name">所在地区</span>
+		<span class="item-place">
+			<input  ng-model="model.provinceName"  readonly="" placeholder="请选择"/>
+			<select  ng-model="model.province_id"  ></select>
+			<i class="iconfont icon-arrow"></i></i>
+		</span>
+    </div>
+    <div class="form-item half-bottom-border">
+		<span class="item-place">
+			<textarea ng-model="model.address" required placeholder="详细地址"></textarea>
+		</span>
+    </div>
+    -->
+</form>
+
+<div class="fixed-bottom">
+    <a class="action-btn" ng-disabled="true" ng-class='{true: "forbid"}[J_Form.$invalid]' ng-click="submit()">提交</a>
+</div>

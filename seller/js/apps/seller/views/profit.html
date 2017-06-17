@@ -1,0 +1,33 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<header class="top-header">
+	<p class="profit-title">可用余额(元)</p>
+	<p class="profit-amount">{{Util.toFixed(info.income, 2)}}</p>
+</header>
+
+<section>
+	<a class="sect-line half-bottom-border" ui-sref="trade.history({type: 0})">
+		<i class="iconfont icon-arrows48pxglyph1direction56"></i>
+		<span>交易记录</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="trade.profitList({type:0})">
+		<i class="iconfont icon-business48pxglyphmoneytime"></i>
+		<span>待收收益</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="trade.profitList({type:1})">
+		<i class="iconfont icon-business48pxglyphroundyen"></i>
+		<span>累计收益</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+	<a class="sect-line half-bottom-border" ui-sref="bankCard.list">
+		<i class="iconfont icon-yinxingqia1"></i>
+		<span>我的银行卡</span>
+		<i class="iconfont icon-arrow"></i>
+	</a>
+</section>
+
+<div class="fixed-bottom">
+	<a class="action-btn" href="javascript:void(0);" ui-sref="trade.applyWithdrawCash">申请提现</a>
+</div>

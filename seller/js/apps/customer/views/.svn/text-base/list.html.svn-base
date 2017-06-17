@@ -1,0 +1,20 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<header class="tab-header ks-clear">
+	<span>用户名</span>
+	<span>金额</span>
+	<span>好评率</span>
+</header>
+<section class="data-wrapper half-top-border my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading">
+	<ul class="data-list">
+		<li class="data-item half-bottom-border" ng-repeat="item in dataList">
+			<div class="ks-clear">
+				<span>
+					<img ng-src="{{item.client_image_url}}" />{{item.client_name}}
+				</span>
+				<span class="ks-cPrimary">{{item.client_amount}}</span>
+				<span>{{item.good_evaluate_rate}}%</span>
+			</div>
+		</li>
+	</ul>
+</section>

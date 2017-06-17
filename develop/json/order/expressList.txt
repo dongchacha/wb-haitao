@@ -1,0 +1,25 @@
+{
+	"code":200,
+	"info":"*******",
+	"expresses":[{
+		  "e_id":"1",
+                "e_name":"顺丰快递",
+                "e_state":1,
+                "e_url": "http://163.com"
+	},{
+        "e_id":"2",
+        "e_name":"圆通快递",
+        "e_state":1,
+        "e_url": "http://163.com"
+     },{
+               "e_id":"3",
+               "e_name":"韵达快递",
+               "e_state":1,
+               "e_url": "http://163.com"
+     },{
+                     "e_id":"4",
+                     "e_name":"其它",
+                     "e_state":1,
+                     "e_url": "http://163.com"
+           }]
+}

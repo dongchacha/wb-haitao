@@ -1,0 +1,34 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="eval-stat">
+	<span>小伙伴评价</span>
+	<span class="star">
+		<i class="iconfont ks-cPrimary" ng-repeat="i in [1,2,3,4,5]" ng-class='{true: "icon-starts", false: "icon-start"}[statInfo.star_average >= i]'></i>
+	</span>
+	<span class="total">{{statInfo.good_percent}}% 好评</span>
+</div>
+
+<ul class="nav half-bottom-border">
+	<li ng-class="{true:'curr'}[pagerParams.type==0]" ng-click="changeType(0)">全部</li>
+	<li ng-class="{true:'curr'}[pagerParams.type==1]" ng-click="changeType(1)">好评(90)</li>
+	<li ng-class="{true:'curr'}[pagerParams.type==2]" ng-click="changeType(2)">中评(90)</li>
+	<li ng-class="{true:'curr'}[pagerParams.type==3]" ng-click="changeType(3)">差评(90)</li>
+</ul>
+
+<div class="data-wrapper my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading">
+	<div class="data-list">
+		<div class="data-item half-bottom-border" ng-repeat="item in dataList">
+			<div class="user">
+				<span class="header-pic"><i class="iconfont icon-nones"></i><img ng-src="{{item.header_img}}" /></span>
+				<span class="user-name">小黄豆</span>
+			</div>
+			<div class="comment">{{item.goods_comment}}</div>
+			<div class="date">{{item.add_time | date:'yyyy-MM-dd'}}</div>
+			<ul class="pics">
+				<li ng-repeat="pic in item.goods_image" class="half-border">
+					<img bt-pic ng-model="pic" ng-click="previewPic($parent.$index, $index)">
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+	<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+	
+	<div class="data-list">
+		<div class="data-item half-bottom-border" ng-repeat="item in dataList" ng-class='{true: "colored"}[!!item.bg_color]' ng-style="item.style"><!--  ui-sref="bankCard.edit({id: item.id})" -->
+			<div class="bank-info">
+				<img ng-src="{{item.logo_url}}"/>
+				<span>{{item.bank_name}}</span>
+			</div>
+			<p class="card-no ks-clear">
+				<span class="iconfont"></span>
+				<span class="iconfont"></span>
+				<span class="iconfont"></span>
+				<span>{{item.bank_no.substr(item.bank_no.length-4, 4)}}</span>
+			</p>
+			<a class="del-card" ng-click="delBankCard(item.id)">删除</a>
+		</div>
+		<div class="add-card" ui-sref="bankCard.add">
+			<i class="iconfont icon-xiao64"></i>
+			<p>添加银行卡</p>
+		</div>
+	</div>

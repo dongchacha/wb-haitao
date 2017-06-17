@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-controller="GController">
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta name="format-detection" content="telephone=no" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <!-- <base href="/"> -->
+    <title ng-bind="pageTitle||''"></title> 
+    <link href="./css/iconfont/iconfont.css?bust=201604281725" rel="stylesheet" />
+    <link href="./css/index.min.css?bust=201604281725" rel="stylesheet" />
+    <link href="./css/seller.min.css?bust=201604281725" rel="stylesheet" />
+</head>
+<body>
+    <div ui-view ng-class="moduleClass">
+    </div><!-- #pbody END -->
+    <script src="./lib/require/require.min.js?bust=201604281725"></script>
+    <script src="./js/config.min.js?bust=201604281725"></script>
+    <script src="./js/app.js?bust=201604281725"></script>
+</body>
+</html>

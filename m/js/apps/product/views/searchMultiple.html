@@ -1,0 +1,40 @@
+<div class="scroll-box">
+	<div class="search-main">
+		<nav class="category-col half-right-border">
+			<a ng-click="vm.choseType=0" class="half-bottom-border" ng-class='{"ks-cPrimary":vm.choseType==0}'>品牌</a>
+			<a ng-click="vm.choseType=1" class="half-bottom-border" ng-class='{"ks-cPrimary":vm.choseType==1}'>国家/地区</a>
+			<a ng-click="vm.choseType=2" class="half-bottom-border" ng-class='{"ks-cPrimary":vm.choseType==2}'>价格</a>
+			<a ng-click="vm.choseType=3" class="half-bottom-border" ng-class='{"ks-cPrimary":vm.choseType==3}'>分类</a>
+		</nav>
+		<ul ng-if="vm.choseType==0">
+			<li class="half-bottom-border" ng-class="{'ks-cPrimary':item.brand_id==vm.pagerParams.brand}" ng-repeat="item in vm.brandList" ng-click="vm.pagerParams.brand=item.brand_id">{{item.brand_name}}<i class="iconfont icon-correct" ng-if="item.brand_id==vm.pagerParams.brand"></i></li>
+		</ul>
+		<ul ng-if="vm.choseType==1">
+			<li class="half-bottom-border" ng-class="{'ks-cPrimary':item.id==vm.pagerParams.country}" ng-repeat="item in vm.countryList" ng-click="vm.pagerParams.country=item.id">{{item.name}}</li>
+		</ul>
+		<ul ng-if="vm.choseType==2">
+			<li  class="half-bottom-border"ng-class="{'ks-cPrimary':item.priceMin==vm.pagerParams.priceMin&&item.priceMax==vm.pagerParams.priceMax}" ng-repeat="item in vm.priceList" ng-click="vm.chosePrice(item.priceMin, item.priceMax)">{{item.name}}</li>
+			<li class="defined">
+				<h4>自定义</h4>
+				<div class="price-box">
+					<div class="half-border">
+						<input type="number" ng-model="vm.price.priceMin" placeholder="最低价格" />
+					</div>
+					<span>-</span>
+					<div class="half-border">
+						<input type="number" ng-model="vm.price.priceMax" placeholder="最高价格" />
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul ng-if="vm.choseType==3">
+			<li class="half-bottom-border" ng-class="{'ks-cPrimary':item.id==vm.pagerParams.category}" ng-repeat="item in vm.categoryList" ng-click="vm.pagerParams.category=item.id">{{item.name}}</li>
+		</ul>
+	</div>
+</div>
+
+<div class="fix-to-bottom" ng-init="vm.bindStatWatch()">
+	<span></span>
+	<a href="javascript:void(0);" class="reset" ng-click="vm.resetSearch()">重置</a>
+	<a href="javascript:void(0);" ng-click="vm.submitSearch()">查看</a>
+</div>

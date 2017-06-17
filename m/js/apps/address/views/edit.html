@@ -1,0 +1,63 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="bt-form">
+	<div class="form-item half-bottom-border">
+
+		<span class="item-name">收件人</span>
+		<span class="item-place">
+			<input type="text" required ng-model="model.true_name" placeholder="请填写收件人姓名" />
+		</span>
+	</div>
+	<div class="form-item half-bottom-border">
+		<span class="item-name">手机号</span>
+		<span class="item-place">
+			<input type="tel" required ng-model="model.mob_phone" placeholder="请填写收件人手机号码" />
+		</span>
+	</div>
+	<!-- <div class="form-item half-bottom-border">
+		<span class="item-name">身份证</span>
+		<span class="item-place">
+			<input type="text" ng-model="model.member_id" placeholder="可选填，购买保税商品一定要填哦" />
+		</span>
+	</div> -->
+	<!--<div class="form-item half-bottom-border">
+		<span class="item-name">所在地区</span>
+		<span class="item-place">
+			<input  ng-model="model.area_info" ng-click="selectProvince()" readonly="" placeholder="请选择"/>
+			<i class="iconfont icon-arrow"></i></i>
+		</span>
+	</div>-->
+	<div class="form-item half-bottom-border" ng-show="selectProvinceShow">
+		<span class="item-name">所在省</span>
+		<span class="item-place">
+			<input  ng-model="model.provinceName"  readonly="" placeholder="请选择省"/>
+			<select  ng-model="model.province_id"  ng-click="provinceChange()" ng-options="obj[0] as obj[2] for obj in provinces"></select>
+			<i class="iconfont icon-arrow"></i></i>
+		</span>
+	</div>
+	<div class="form-item half-bottom-border"  ng-show="selectProvinceShow">
+		<span class="item-name">所在市</span>
+		<span class="item-place">
+			<input  ng-model="model.cityName"  readonly="" placeholder="请选择市"/>
+			<select id="addressCity" ng-model="model.city_id"   ng-click="cityChange()" ng-options="obj[0] as obj[2] for obj in provinceCities "></select>
+			<i class="iconfont icon-arrow"></i></i>
+		</span>
+	</div>
+	<div class="form-item half-bottom-border"  ng-show="selectProvinceShow">
+		<span class="item-name">所在区</span>
+		<span class="item-place">
+			<input  ng-model="model.areaName"   readonly="" placeholder="请选择区"/>
+			<select id="addressArea" ng-model="model.area_id" ng-click="areaChange()" ng-options="obj[0] as obj[2] for obj in cityAreaes"></select>
+	        <i class="iconfont icon-arrow"></i></i>
+		</span>
+	</div>
+	<div class="form-item half-bottom-border">
+		<span class="item-place">
+			<textarea ng-model="model.address" required placeholder="详细地址"></textarea>
+		</span>
+	</div>
+</div>
+
+<div class="fixed-bottom">
+	<a class="action-btn" href="javascript:void(0);" ng-click="submitAddress()">保存地址</a>
+</div>

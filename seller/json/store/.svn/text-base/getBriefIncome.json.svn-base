@@ -1,0 +1,9 @@
+{
+    "code": 200,
+    "datas": {
+		"income": "93",
+		"today": "12",
+		"week": "333",
+		"vistors": "3212"
+    }
+}

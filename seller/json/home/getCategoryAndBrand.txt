@@ -1,0 +1,110 @@
+{
+	"code":200,
+	"datas": {
+		"store_id": 12,
+		"store_name": "小黄豆的店",
+		"top": [
+			{
+				"url": "#/product/list",
+				"img" : "./img/test/index-banner1.png"
+			},
+			{
+				"url": "#/product/list",
+				"img" : "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg"
+			},
+			{
+				"url": "#/product/list",
+				"img" : "./img/test/index-banner2.png"
+			}
+		],
+		"top_cls": [
+            {
+                "cls_id": 1,
+                "cls_name": "基础护肤",
+                "cls_icon": "jichuhufu"
+            },
+            {
+                "cls_id": 2,
+                "cls_name": "面膜眼膜",
+                "cls_icon": "mianmo"
+            },
+            {
+                "cls_id": 3,
+                "cls_name": "面部清洁",
+                "cls_icon": "mianbuqingji"
+            },
+            {
+                "cls_id": 4,
+                "cls_name": "洗护沐浴",
+                "cls_icon": "xihumuyu"
+            },
+            {
+                "cls_id": 5,
+                "cls_name": "婴童护理",
+                "cls_icon": "jiankangtongsuo"
+            },
+            {
+                "cls_id": 6,
+                "cls_name": "彩妆香氛",
+                "cls_icon": "caizhuangxiangfen"
+            },
+            {
+                "cls_id": 7,
+                "cls_name": "男士护理",
+                "cls_icon": "nanshihuli"
+            },
+            {
+                "cls_id": 8,
+                "cls_name": "应季产品",
+                "cls_icon": "tianqi"
+            }],
+		"top_brand": [{
+            "brand_id": 1,
+            "brand_name": "得闲",
+            "brand_brief": "的司法斯蒂dadASfdsaf 芬",
+            "brand_pic": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg"
+        },
+        {
+            "brand_id": 2,
+            "brand_name": "得闲23",
+            "brand_brief": "的司法斯蒂324芬",
+            "brand_pic": "http://public.upload.btjf.com/PUBLIC/CAR_IMAGE/2016-08-05/cd96a1e6-64b5-4e8e-9e96-4390fea24ec9.jpg"
+        },
+        {
+            "brand_id": 3,
+            "brand_name": "得闲范德萨范德萨",
+            "brand_brief": "的司法是斯蒂芬",
+            "brand_pic": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg"
+        },
+        {
+            "brand_id": 4,
+            "brand_name": "得闲",
+            "brand_brief": "的司法斯蒂芬",
+            "brand_pic": "http://public.upload.btjf.com/PUBLIC/CAR_IMAGE/2016-08-05/cd96a1e6-64b5-4e8e-9e96-4390fea24ec9.jpg"
+        },
+        {
+            "brand_id": 5,
+            "brand_name": "得闲",
+            "brand_brief": "的司法斯蒂芬",
+            "brand_pic": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg"
+        },
+        {
+            "brand_id": 6,
+            "brand_name": "得闲",
+            "brand_brief": "的司法斯蒂芬",
+            "brand_pic": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg"
+        },
+        {
+            "brand_id": 7,
+            "brand_name": "得闲",
+            "brand_brief": "的司法斯蒂芬",
+            "brand_pic": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg"
+        },
+        {
+            "brand_id": 8,
+            "brand_name": "得闲",
+            "brand_brief": "的司法斯蒂芬",
+            "brand_pic": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg"
+        }]
+	}
+}

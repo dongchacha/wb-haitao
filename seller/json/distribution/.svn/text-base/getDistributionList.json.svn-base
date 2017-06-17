@@ -1,0 +1,18 @@
+{
+    "code": 200,
+    "datas": {
+    	"ds1": [{
+    		"seller_name": "客户名称1",
+    		"avatar": "./img/test/car1.png"
+		},{
+            "seller_name": "客户名称2",
+            "avatar": "./img/test/car1.png"
+        },{
+            "seller_name": "客户名称3",
+            "avatar": "./img/test/car1.png"
+        },{
+            "seller_name": "客户名称4",
+            "avatar": "./img/test/car1.png"
+        }]
+    }
+}

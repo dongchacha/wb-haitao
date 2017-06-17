@@ -1,0 +1,112 @@
+﻿{
+    "code": 200,
+    "datas": {
+        "goods_info": {
+            "goods_name": "\u52b3\u529b\u58ebRolex \u5b87\u5b99\u8ba1\u578b\u8fea\u901a\u62ff \u81ea\u52a8\u673a\u68b0\u76ae\u5e26\u7537\u8868 \u6b63\u54c1116519 CR.TB \u9ed1\u8272 \u76ae aa",
+            "goods_jingle": "\u3010\u96c5\u6b27\u56fd\u9645\u3011\uff1a\u6240\u6709\u5546\u54c1\u5168\u65b0\u539f\u88c5\u6b63\u54c1\u3000\u3000",
+            "goods_attr": [{
+                "value": "毛衣",
+                "name": "款式"
+            },{
+                "value": "羊毛/羊绒",
+                "name": "材质"
+            }],
+            "mobile_body": "<img src=\"http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627958339099_1280.jpg\"><img src=\"http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627931531971_1280.jpg\"><img src=\"http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627900055146_1280.png\"><img src=\"http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627871532105_1280.png\"><img src=\"http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627843241680_1280.jpg\"><div>\u597d\u597d\u597d\u597d\u597d<\/div>",
+            "goods_price": "1.00",
+            "goods_marketprice": "2.00",
+            "goods_costprice": "0.00",
+            "goods_discount": "50",
+            "goods_id": "100052",
+            "goods_promotion_price": "1.00",
+            "goods_promotion_type": "0",
+            "goods_storage": "0",
+            "evaluation_count": "0"
+        },
+        "store_info": {
+            "store_desc": "店铺说明说明",
+            "store_name": "lala",
+            "store_address": "发士大夫但是的萨芬收到防守打法倒萨打算fads方法的撒打算fads发大师傅fads啊大水法大水法",
+            "store_phone": "15068881707",
+            "store_wx": "sfdsag"
+        },
+        "spec_list": {
+            "1|3|5": "100034",
+            "1|3|6": "100035",
+            "1|3|7": "100036",
+            "1|4|5": "100037",
+            "1|4|6": "100038",
+            "1|4|7": "100039",
+            "2|3|5": "100040",
+            "2|3|6": "100041",
+            "2|3|7": "100042",
+            "2|4|5": "100043",
+            "2|4|6": "100044",
+            "2|4|7": "100045",
+            "3|5|8": "100046",
+            "3|6|8": "100047",
+            "3|7|8": "100048",
+            "4|5|8": "100049",
+            "4|6|8": "100050",
+            "4|7|8": "100051",
+            "3|5|9": "100052",
+            "3|6|9": "100053",
+            "3|7|9": "100054",
+            "4|5|9": "100055",
+            "4|6|9": "100056",
+            "4|7|9": "100057"
+        },
+        "goods_image": [
+            "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg", 
+            "http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg"
+        ],
+        "is_favorate": false,
+        "spec_info": [
+        {
+            "spec_id": 1,
+            "spec_name": "\u989c\u8272",
+            "data": [{
+                "id": 1,
+                "spec_value": "\u7ea2\u8272",
+                "img": "http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627931531971_60.jpg"
+            }, {
+                "id": 8,
+                "spec_value": "\u84dd\u8272",
+                "img": "http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627931531971_60.jpg"
+            }, {
+                "id": 9,
+                "spec_value": "\u9ed1\u8272",
+                "img": "http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627931531971_60.jpg"
+            }, {
+                "id": 2,
+                "spec_value": "\u7eff\u8272",
+                "img": "http:\/\/127.0.0.1\/cls\/data\/upload\/shop\/store\/goods\/1\/1_04752627931531971_60.jpg"
+            }],
+            "current": 9
+        }, {
+            "spec_id": 2,
+            "spec_name": "\u6750\u6599",
+            "current": 3,
+            "data": [{
+                "id": 3,
+                "spec_value": "\u76ae"
+            }, {
+                "id": 4,
+                "spec_value": "\u94c1"
+            }]
+        }, {
+            "spec_id": 3,
+            "spec_name": "\u4ea7\u5730",
+            "current": 5,
+            "data": [{
+                "id": 5,
+                "spec_value": "aa"
+            }, {
+                "id": 6,
+                "spec_value": "bb"
+            }, {
+                "id": 7,
+                "spec_value": "cc"
+            }]
+        }]
+    }
+}

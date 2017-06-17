@@ -1,0 +1,12 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<section class="data-wrapper my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading">
+	<ul class="data-list">
+		<li class="data-item half-bottom-border" ng-repeat="item in dataList" ui-sref="trade.detail({model:encodeModel(item)})">
+			<span class="type">{{item.type=="1"?"提现":"收益"}}</span>
+			<strong class="state" ng-class="{true:'finish'}[item.state==2]">{{item.state==2?"已完成":"进行中"}}</strong>
+			<p class="time">{{item.add_time * 1000 | date:'yyyy-MM-dd hh:mm'}}</p>
+			<div class="amount" ng-class="{true:'add'}[item.type=='2']">{{item.type=="2"?"+":"-"}}{{Util.toFixed(item.amount,2)}}</div>
+		</li>
+	</ul>
+</section>

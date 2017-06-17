@@ -1,0 +1,22 @@
+    <div ng-controller="">
+        
+    </div>
+<div class="bg an-fadeInOut" ng-if="isShowPay" ng-click="closeOverlay()"></div>
+
+<div class="overlay pro-param an-slideDown" ng-if="showTarget==1">
+    <i class="iconfont icon-close" ng-click="closeOverlay()"></i>
+    <header>选择支付方式</header>
+    <div class="line half-top-border"></div>
+    <header class="half-top-border">支付金额 <b>¥165.00</b>元</header>
+    <div class="line half-top-border">
+        <span class="name">品牌</span>
+        <span class="val">品牌名称</span>
+    </div>
+    <div class="line half-top-border">
+        <span class="name">使用方法</span>
+        <span class="val">发范德萨法大师傅大师傅法倒萨的身份大师傅大师傅但是大师风范啊都是第三方大师傅 的</span>
+    </div>
+    <div class="action-container half-top-border">
+        <a class="action-btn" ng-click="closeOverlay()">完成</a>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{
+	"code": 200,
+	"datas": {
+		"bank_list": [{
+			"bank_name": "\u62db\u5546\u94f6\u884c1",
+			"bank_id": "\u5f20\u4e09",
+			"url": "./img/test/car1.png",
+			"color": "red"
+		}, {
+			"bank_name": "\u4e2d\u56fd\u94f6\u884c2",
+			"bank_id": "\u5f20\u4e09",
+			"url": "./img/test/car1.png",
+			"color": "#00A384"
+		}, {
+			"bank_name": "\u4e2d\u56fd\u94f6\u884c3",
+			"bank_id": "\u5f20\u4e09",
+			"url": "./img/test/car1.png",
+			"color": "green"
+		}]
+	}
+}

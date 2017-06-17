@@ -1,0 +1,1 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>

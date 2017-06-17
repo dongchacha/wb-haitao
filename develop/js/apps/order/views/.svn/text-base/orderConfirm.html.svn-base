@@ -1,0 +1,85 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="bt-form">
+	<div class="address" ng-if="!chosedAddress.address_id">
+		<i class="iconfont icon-adress"></i>
+		<i class="iconfont icon-arrow"></i>
+		<a ui-sref="order.confirm.addAddress">
+			您还没添加收货地址<span>立即添加</span>
+		</a>
+	</div>
+	<div class="address got" ng-if="chosedAddress.address_id">
+		<i class="iconfont icon-adress"></i>
+		<i class="iconfont icon-arrow"></i>
+		<a ui-sref="order.confirm.chooseAddress">
+			<p class="people">收货人：{{chosedAddress.true_name}}</p>
+			<p>收货地址：{{chosedAddress.area_info}} {{chosedAddress.address}}</p>
+		</a>
+	</div>
+
+	<div class="pro-list">
+		<div class="pro-item" ng-repeat="store in storeList">
+			<header class="rect half-bottom-border ks-clear">
+				<a><i class="iconfont icon-storen"></i>{{store.store_name}}</a>
+			</header>
+
+			<div class="section half-bottom-border" ng-repeat="pro in store.pro_list" ui-sref="product.detail({id:pro.goods_id})">
+				<span class="pic half-border"><img bt-pic ng-model="pro.goods_image_url" /></span>
+				<div class="info-rect">
+					<div class="title">
+						<span>{{pro.goods_name}}</span>
+						<span class="price">¥{{Util.toFixed(pro.goods_price, 2)}}<b>x{{pro.goods_num}}</b></span>
+					</div>
+					<div class="desc">
+						<span ng-repeat="spec in pro.goods_spec.split(',')">{{spec.split(':')[0]}}<b>{{spec.split(':')[1]}}</b></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="rect half-bottom-border stat-rect">
+				共{{store.goods_num}}件商品 合计：<span class="ks-cPrimary">¥<strong>{{Util.toFixed(store.total_amount, 2)}}</strong></span>
+				<!-- <span class="shipping-fee" ng-if="order.shipping_fee > 0">含运费 ¥{{order.shipping_fee}}</span> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="form-item half-bottom-border">
+		<span class="item-name">买家留言</span>
+		<span class="item-place">
+			<input type="text" required placeholder="选填：对本次交易的说明" ng-model="info.desc" />
+		</span>
+	</div>
+</div>
+
+<div class="fixed-bottom" style="margin-top: 10px;">
+	<div class="order-stat-container half-top-border ks-clear">
+		<span class="total">共<b>{{goods_num}}</b>件商品</span>
+		<span class="stat">合计: <b>¥{{Util.toFixed(total_amount, 2)}}</b></span>
+		<a class="settlement" ng-click="pay()">立即支付</a>
+	</div>
+</div>
+
+<div class="bg an-fadeInOut" ng-if="showTarget > 0" ng-click="closeOverlay()"></div>
+
+<div class="overlay pay an-slideDown" ng-if="showTarget==1">
+    <i class="iconfont icon-close" ng-click="closeOverlay()"></i>
+    <header>选择支付方式</header>
+    <div class="pay-stat half-top-border">支付金额 <strong class="ks-cPrimary">¥{{Util.toFixed(total_amount, 2)}}</strong>元</div>
+    <div class="line half-top-border" ng-click="info.pay_code='wxpay_jsapi'">
+    	<i class="pay-style iconfont icon-weixin1"></i>
+    	<span>微信支付</span>
+    	<i class="iconfont" ng-class='{true:"icon-chooses ks-cPrimary",false:"icon-choosen"}[info.pay_code=="wxpay_jsapi"]'></i>
+    </div>
+    <div class="line half-top-border" ng-click="info.pay_code='alipay'">
+    	<i class="pay-style iconfont icon-zhifubao"></i>
+    	<span>支付宝</span>
+    	<i class="iconfont" ng-class='{true:"icon-chooses ks-cPrimary",false:"icon-choosen"}[info.pay_code=="alipay"]'></i>
+    </div>
+    <div class="action-container half-top-border">
+        <a class="action-btn" ng-click="confirmPay()">确认支付</a>
+    </div>
+</div>
+
+<div ui-view ng-if="$state.is('order.confirm.addAddress')" class="silde-wrapper addressEdit-wrapper an-slideRight"></div>
+
+<div ui-view ng-if="$state.is('order.confirm.chooseAddress')" class="silde-wrapper chooseAddress-wrapper addressList-wrapper an-slideRight"></div>

@@ -1,0 +1,14 @@
+{
+	"code":200,
+	"datas": {
+		"member_info": {
+			"user_name": "阿三",
+			"avatar": "http://img10.360buyimg.com/n7/jfs/t2299/147/1502106076/275233/48140a23/56b3217bN4f1d10ec.jpg!q70.jpg",
+			"order_nopay_count" : 1,
+			"order_nosend_count": 0,
+			"order_noreceipt_count": 2,
+			"order_noeval_count": 0,
+			"balance": 123.00
+		}
+	}
+}

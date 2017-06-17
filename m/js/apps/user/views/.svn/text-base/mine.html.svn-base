@@ -1,0 +1,54 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<header class="user-info">
+	<p class="header-pic"><i class="iconfont icon-nones"></i><img ng-src="{{userInfo.avatar}}" /></p>
+	<p class="username" ng-click="gotoLogin()">{{userInfo.user_name ? userInfo.user_name : "未登录"}}</p>
+	<p class="amount" ng-if="userInfo.user_name">余额 ¥{{Util.toFixed(userInfo.balance, 2)}}</p>
+</header>
+
+<section class="order-container">
+	<a class="all-orders half-bottom-border stress-item" ui-sref="order.orderList({type: 0})">
+		我的订单
+		<span>查看全部订单<i class="iconfont icon-arrow"></i></span>
+	</a>
+	<div class="menu-box">
+		<a ui-sref="order.orderList({type: 1})" class="stress-item">
+			<i class="iconfont icon-card">
+			<b ng-if="userInfo.order_nopay_count > 0">{{userInfo.order_nopay_count > 99 ? "99+" : userInfo.order_nopay_count}}</b></i>
+			<p>待付款</p>
+		</a>
+		<a ui-sref="order.orderList({type: 2})" class="stress-item">
+			<i class="iconfont icon-car">
+			<b ng-if="userInfo.order_nosend_count > 0">{{userInfo.order_nosend_count > 99 ? "99+" : userInfo.order_nosend_count}}</b></i>
+			<p>待发货</p>
+		</a>
+		<a ui-sref="order.orderList({type: 3})" class="stress-item">
+			<i class="iconfont icon-box">
+			<b ng-if="userInfo.order_noreceipt_count > 0">{{userInfo.order_noreceipt_count > 99 ? "99+" : userInfo.order_noreceipt_count}}</b></i>
+			<p>待收货</p>
+		</a>
+		<a ui-sref="order.orderList({type: 4})" class="stress-item">
+			<i class="iconfont icon-chat">
+			<b ng-if="userInfo.order_noeval_count > 0">{{userInfo.order_noeval_count > 99 ? "99+" : userInfo.order_noeval_count}}</b></i>
+			<p>待评价</p>
+		</a>
+		<a ui-sref="order.saledOrderList" class="stress-item">
+			<i class="iconfont icon-money"></i>
+			<p>售后/退款</p>
+		</a>
+	</div>
+</section>
+
+<section class="nav-container">
+	<a ui-sref="address.myAddressList()" class="half-bottom-border stress-item">
+		我的收货地址<span>收货地址管理<i class="iconfont icon-arrow"></i></span>
+	</a>
+	<a href="http://taoyoudao.net/shop/webapi/index.php?cls=new_store&fun=contract_type" class="half-bottom-border stress-item">
+		我要加盟<span>惊喜哦<i class="iconfont icon-arrow"></i></span>
+	</a>
+<!-- 	<a ui-sref="mine.collection()" class="half-bottom-border stress-item">
+		我的收藏<span class="iconfont"></span>
+	</a> -->
+</section>
+
+<div ng-include="'js/apps/common/views/bottomNav.html'"></div>

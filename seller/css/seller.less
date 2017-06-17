@@ -1,0 +1,832 @@
+/*
+ * 卖家版扩展样式
+ */  
+@charset "UTF-8"; 
+@import "variables.less";   
+@import "mixin.less";
+@import "base.less";
+
+//首页
+.home-wrapper{
+	.category-link-box{
+		background-color: #fff;
+		padding: 10px;
+		margin-bottom: 10px;
+		a{
+			display: block;
+			line-height: 55px;
+			font-size: 20px;
+			border-radius: 5px;
+			background: #F1432A;
+			text-align: center;
+			color: #fff;
+			&:nth-child(2){
+				margin-top: 10px;
+				background-color: #FF8B00;
+			}
+			i,span{
+				vertical-align: middle;
+			}
+			i{
+				font-size: 27px;
+				color: #fff;
+			}
+		    &:nth-child(1) i{
+		    	font-size: 33px;
+		    }
+		}
+	}
+}
+
+//卖家中心
+.seller-center-wrapper{
+	section{
+		background-color: #fff;
+		margin-bottom: 10px;
+		.sect-line{
+			.display-box;
+			padding: 0 15px;
+			height: 50px;
+			line-height: 50px;
+			i, span, strong{
+				display: block;
+				vertical-align: baseline;
+				font-size: 16px;
+			}
+			span{
+				.box-flex(1);
+				&.right-txt{
+					text-align: right;
+					color: #666;
+					font-size: 16px;
+    				margin: -1px -5px 0 0;
+				    max-width: 170px;
+				    text-overflow: ellipsis;
+				    overflow: hidden;
+				    white-space: nowrap;
+				}
+			}
+			i{
+				font-size: 20px;
+    			width: 22px;
+				&:nth-child(1){
+					margin-right: 10px;
+				}
+				&.icon-arrow{
+					width: 18px;
+				}
+				&.icon-phone1{
+				    font-size: 24px;
+				    position: relative;
+				    top: -2px;
+				    left: -2px;
+				    // margin-right: 6px;
+				}
+				&.icon-tixian{
+				    font-size: 25px;
+				    // margin-right: 4px;
+				    // position: relative;
+				    // left: -2px;
+				}
+				&.icon-yinxingqia{
+				    font-size: 16px;
+				    // margin-right: 6px;
+				    // position: relative;
+				    // left: -2px;
+				    // top: -2px;
+				}
+			}
+			// img{
+			// 	width:40px;
+			// 	height: 40px;
+			// }
+			strong{
+			    font-size: 14px;
+			    height: 28px;
+			    line-height: 28px;
+			    border-radius: 4px;
+			    color: #fff;
+				background-color: @primaryColorRed;
+			    position: relative;
+			    top: 10px;
+			    padding: 0 15px;
+			    font-weight: normal;
+			}
+			.file-upload{
+				a{
+					// background-color: red;
+					// margin-top: 5px;
+					width: 40px;
+					height: 40px;
+					&.add:before{
+						font-size: 40px;
+					    position: relative;
+					    top: -3px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//卖家首页
+.seller-index-wrapper{
+	header{
+		position: relative;
+		color: #fff;
+		background-color: @primaryColorRed;
+		text-align: center;
+		// height: 200px;
+		.top-bar{
+			position: relative;
+			text-align: center;
+			font-size: 20px;
+			padding: 20px 0 50px 0;
+			img{
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				width: 45px;
+				height: 45px;
+				border-radius: 45px;
+			}
+		}
+		.profit-title{
+			font-size: 18px;
+		}
+		.profit-amount{
+			font-size: 30px;
+			margin: 10px 0 0 0;
+		}
+		.bottom-bar{
+			margin-top: 35px;
+			background-color: rgba(0, 0, 0, 0.3);
+			padding: 10px 0;
+			li{
+				font-size: 12px;
+				float: left;
+				width: 33.33%;
+				p:nth-child(1){
+					font-size: 20px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	.main-nav{
+		background-color: #fff;
+		li{
+			float: left;
+			width: 50%;
+			.display-box;
+			// height: 100px;
+			padding: 35px 0;
+			.box1{
+				min-width: 70px;
+				.box-flex(1);
+				img{
+					display: block;
+				    width: 55px;
+				    height: 55px;
+				    margin: -2px auto 0 auto;
+				}
+			}
+			.box2{
+				min-width: 100px;
+				.box-flex(1);
+				font-size: 12px;
+				p{
+					color: #999;
+					&:nth-child(1){
+						font-size: 20px;
+						color: #333;
+						margin-top: 15px;
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//我的收益
+.seller-profit-wrapper{
+	.common-header{
+		background: @primaryColorRed;
+		.iconfont {
+			color: #fff;
+		}
+		&:after{
+			border-bottom-width: 0 !important;
+		}
+	}
+	.top-header{
+		text-align: left;
+		padding: 25px 15px 50px 15px;
+	}
+	section{
+		.sect-line{
+			.iconfont{
+			    width: 30px;
+			    text-align: center;
+			}
+			.icon-arrows48pxglyph1direction56{
+				color: #F6A62A;
+			}
+			.icon-business48pxglyphmoneytime{
+				color: #4A8EE3;
+			}
+			.icon-business48pxglyphroundyen{
+				color: #F2443F;
+			}
+			.icon-yinxingqia1{
+				color: #FF8500;
+			}
+		}
+	}
+}
+
+//待收收益
+.profitForCollect-wrapper{
+	.total{
+	    text-align: center;
+	    border-radius: 100%;
+	    border: 35px solid #E6E6E6;
+	    line-height: 110px;
+	    font-size: 25px;
+	    margin: 70px auto 25px auto;
+	    width: 180px;
+	    height: 180px;
+	    font-weight: bold;
+	}
+	.data-wrapper{
+		position: static !important;
+		.data-list .data-item .amount{
+		    line-height: 35px !important;
+		    padding-top: 3px;
+			.remain{
+				line-height: 1;
+				color: #999;
+				font-size: 12px;
+				text-align: right;
+			}
+		}
+	}
+}
+
+//申请提现
+.applyWithdrawCash-wrapper{
+	.form-wrapper{
+		padding-top: 1px;
+		.gForm{
+			background-color: transparent;
+		}
+		.form-box{
+			padding: 0 15px;
+			font-size: 14px;
+			background-color: #fff;
+		}
+		.form-item{
+			background-color: #fff;
+		}
+		.chose-bankCard{
+			position: relative;
+			padding: 15px 0 17px 75px;
+			margin-bottom: 10px;
+			display: block;
+			img{
+				position: absolute;
+				left: 15px;
+				top: 10px;
+				width: 45px;
+				height: 45px;
+				border-radius: 45px;
+			}
+			.name{
+				font-weight: bold;
+				font-size: 14px;
+				padding-bottom: 8px;
+			}
+			.num{
+				color: #999;
+				font-size: 12px;
+			}
+			.icon-arrow{
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				font-size: 20px;
+				text-align: center;
+				width: 18px;
+				height: 20px;
+				margin-top: -10px;
+			}
+		}
+		.add-card{
+			padding-left: 15px;
+		}
+		.money-box{
+			padding: 15px 15px 10px 15px;
+			.title{
+				color: #666;
+				margin-bottom: 10px;
+			}
+			.main{
+				position: relative;
+				.unit{
+					position: absolute;
+					left: 0;
+					top: 10px;
+					font-size: 30px;
+				}
+				input{
+					width: 100%;
+				    padding-left: 27px;
+				    font-size: 40px;
+				}
+			}
+		}
+		.total-box{
+			line-height: 44px;
+			height: 44px;
+			margin-bottom: 10px;
+			span{
+				&:nth-child(1){
+					color: #999;
+				}
+				&:nth-child(2){
+					float: right;
+					color: @primaryColorRed;
+				}
+			}
+		}
+	}
+	.pay-pwd{
+		background-color: #FAFAFA;
+		.pwd-box{
+			padding: 20px 0;
+			font-size: 0;
+			text-align: center;
+			li{
+				background-color: #fff;
+				display: inline-block;
+				width: 48px;
+				height: 48px;
+				text-align: center;
+				&:after{
+					border-right-width: 0 !important;
+				}
+				&:last-child:after{
+					border-right-width: 1px !important;
+				}
+				b{
+				    display: block;
+				    width: 20px;
+				    height: 20px;
+				    border-radius: 20px;
+				    background-color: #000;
+				    margin: 14px 0 0 14px;
+				}
+			}
+		}
+		.keyboard{
+			li{
+				color: #000;
+				height: 56px;
+				line-height: 1;	
+				padding: 6px 0 0 0;
+				background-color: #fff;
+				float: left;
+				font-weight: bold;
+				text-align: center;
+				width: 33.333%;
+				font-size: 29px;
+				&.gray{
+					background-color: #D1D5DB;
+				}
+				&:nth-child(n+10){
+					padding: 0 0 0 0;			
+					line-height: 56px;
+				}
+				p{
+					font-size: 11px;
+					line-height: 1;
+				}
+				.icon-biaoqingshanchujian{
+					color: #000;
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}
+
+//提现账户
+.choseAccount-wrapper{
+	padding-top: 10px;
+	.data-list{
+		.data-item{
+			background-color: #fff;
+			position: relative;
+			padding: 15px 0 17px 75px;
+			margin-bottom: 10px;
+			display: block;
+			img{
+				position: absolute;
+				left: 15px;
+				top: 10px;
+				width: 45px;
+				height: 45px;
+				border-radius: 45px;
+			}
+			.name{
+				font-weight: bold;
+				font-size: 14px;
+				padding-bottom: 8px;
+			}
+			.num{
+				color: #999;
+				font-size: 12px;
+			}
+			.icon-dui{
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				font-size: 20px;
+				text-align: center;
+				width: 18px;
+				height: 20px;
+				margin-top: -10px;
+				color: #4E9BFF;
+			}
+		}
+	}
+}
+
+//选择银行
+.addBankCard-wrapper{
+	.bank-info{
+	    display: block;
+	    width: 100%;
+    	text-align: right;
+		img{
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			display: inline-block;
+			font-size: 0;
+			vertical-align: middle;
+		    position: relative;
+		    top: -3px;
+		}
+	}
+}
+
+//我的银行卡
+.bankCard-wrapper{
+	.data-list{
+		padding: 15px;
+		.data-item{
+			position: relative;
+			border-radius: 3px;
+			background-color: #fff;
+			// color: #fff;
+			font-size: 14px;
+			margin-bottom: 15px;
+			padding: 15px;
+			&.colored{
+				@color: #fff;
+				color: @color;
+				.iconfont:before{
+					color: @color !important;
+				}
+				.del-card{
+					color: @color;
+					&:after{
+						border-color: @color;
+					}
+				}
+			}
+			.bank-info{
+				position: relative;
+				height: 45px;
+				line-height: 45px;
+				padding-left: 60px;
+				img{
+					position: absolute;
+					left: 0;
+					top: 0;
+					width:45px;
+					height: 45px;
+					border-radius: 45px;
+				}
+			}
+			.card-no{
+				margin-top: 10px;
+				font-size: 16px;
+				// .display-box;
+				span{
+					margin-right: 10px;
+					// display: block;
+					// .box-flex(2);
+					font-size: 16px;
+					line-height: 16px;
+					&.iconfont:before{
+						font-size: 12px;
+						color: #333;
+						content: "\e62c\e62c\e62c\e62c";
+					}
+				}
+				b{
+					// background-color: #333;
+					// width: 5px;
+					// height: 5px;
+					// border-radius: 5px;
+					// float: left;
+					// margin: 5px 8px 0 0;
+					// &:nth-child(4n){
+					// 	margin-right: 30px;
+					// }
+					// letter-spacing: 10px;
+					// font-size: 20px;
+				}
+			}
+			.del-card{
+				position: absolute !important;
+				right: 10px;
+				top: 10px;
+			    color: #666;
+			    font-size: 14px;
+			    text-align: center;
+			    padding: 5px 10px;
+			    min-width: 45px;
+			    .half-border(all, #666, 5px);
+			}
+		}
+		.add-card{
+			color: #999;
+			font-size: 16px;
+			text-align: center;
+			background-color: #fff;
+			padding: 15px;
+			border-radius: 3px;
+			.iconfont{
+				font-size: 40px;
+			}
+			p{
+				padding-top: 10px;
+			}
+		}
+	}
+}
+
+//客户管理
+.customer-wrapper{
+	background-color: #fff;
+	.tab-header{
+		padding: 0 15px;
+	}
+	.tab-header span,
+	.data-wrapper .data-item span{
+		font-size: 14px;
+		width: 30%;
+		float: left;
+		line-height: 44px;
+		height: 44px;
+		// display: inline-block;
+		text-align: center;
+		&:nth-child(1){
+			width: 40%;
+		}
+	}
+	.data-wrapper{
+		background-color: #fff;
+		position: absolute;
+		top: 88px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		li.data-item{
+			padding: 0 15px;
+			span{
+				white-space: nowrap;
+			    overflow-x: hidden;
+			    text-overflow: ellipsis;
+				img{
+					position: relative;
+					top:-2px;
+					display: inline;
+					border-radius: 50%;
+					border: 0;
+					width: 40px;
+					height: 40px;
+					vertical-align: middle;
+					margin-right: 10px;
+				}
+				font-size: 16px;
+				line-height: 60px;
+				height: 60px;
+				&:nth-child(1){
+					text-align: left;
+				}
+				&:nth-child(3){
+					color: #EC361A;
+				}
+			}
+		}	
+	}
+}
+
+//交易管理
+.tradeList-wrapper{
+    .data-wrapper{
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+    }
+	.data-list{
+		.data-item{
+			position: relative;
+			padding: 10px 15px;
+			background-color: #fff;
+			font-size: 16px;
+			height: 60px; 
+			.type{
+				position: relative;
+				top: 2px;
+			}
+			.state{
+				font-weight: normal;
+				color: #fff;
+				font-size: 10px;
+				background-color: #FD6503;
+				text-align: center;
+				padding: 2px 5px;
+				&.finish{
+					background-color: #4D9BFF;
+				}
+			}
+			.time{
+				font-size: 12px;
+				color: #999;
+				margin-top: 10px;
+			}
+			.amount{
+				position: absolute;
+				right: 15px;
+				top: 0;
+				line-height: 60px;
+				color: #333;
+				font-size: 20px;
+				&.add{
+					color: #EC2D00;
+				}
+			}
+		}
+	}
+}
+
+//交易详情
+.tradeDetail-wrapper{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;	
+	background-color: #fff;
+	section{
+		padding: 10px 15px;
+		p{
+			font-size: 14px;
+			line-height: 30px;
+			&.amount{
+				line-height: 30px;
+				font-size: 15px;
+				.val{
+					font-size: 20px;
+					&.add{
+						color: @primaryColorRed;
+					}
+				}
+			}
+			.name{
+				float: left;
+				color: #999;
+			}
+			.val{
+				float: right;
+				color: #333;
+			}
+		}
+	}
+}
+
+//分销管理
+.distribution-wrapper{
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	.data-list{
+		.data-item{
+			height: 90px;
+			line-height: 90px;
+			padding: 0 15px;
+			.display-box;
+			img, span{
+				display: block;
+			}
+			img{
+				width: 60px;
+				height: 60px;
+				border-radius: 60px;
+    			margin: 15px 15px 0 0;
+			}
+			span{
+				font-size: 17px;
+				.box-flex(1);
+			}
+		}
+	}
+}
+
+//店铺简介
+.editStoreIntro-wrapper{
+	
+}
+
+/**
+ * 底部导航
+ */
+.bottom-nav{
+    a{
+    	line-height: 1;
+        &.curr{
+            color: @primaryColorRed;
+        }
+    	i{
+    		display: block;
+    		padding: 5px 0 3px 0;
+    	}
+    	span{
+    		display: block;
+    		font-size: 9px;
+    	}
+    //     height: @barBaseHeight;
+    //     line-height: @barBaseHeight;
+    //     text-align: center;
+    //     font-size: @barBaseHeight / 2;
+    //     .box-flex(1);
+        // i{
+        //     position: relative;
+        //     color: @fontColorDarkBlack;
+        //     b{
+        //         position: absolute;
+        //         right: -15px;
+        //         top: -8px;
+        //         font-size: 12px;
+        //         background: @primaryColorRed;
+        //         color: #fff;
+        //         border-radius: 50px;
+        //         text-align: center;
+        //         font-weight: normal;
+        //         min-width: 16px;
+        //         padding: 0 5px;
+        //         line-height: 16px;
+        //         height: 16px;      
+        //     }
+        // }
+        // &.curr i{
+        //     color: @primaryColorRed;
+        // }
+        &:nth-child(1) i:after{
+            content: "\e61e";
+        }
+        &:nth-child(2) i:after{
+            content: "\e603";
+        }
+        &:nth-child(3) i:after{
+            content: "\e621";
+        }
+        &:nth-child(4) i:after{
+            content: "\e60a";
+        }
+        
+        &.curr:nth-child(1) i:after{
+            content: "\e61f";
+        }
+        &.curr:nth-child(2) i:after{
+            content: "\e603";
+        }
+        &.curr:nth-child(3) i:after{
+            content: "\e620";
+        }
+        &.curr:nth-child(4) i:after{
+            content: "\e61d";
+        }
+    }
+}

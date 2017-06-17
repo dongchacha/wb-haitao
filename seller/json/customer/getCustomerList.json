@@ -1,0 +1,116 @@
+{
+    "code": 200,
+    "datas": {
+    	"client_list": [{
+    		"client_name": "客户名称1",
+    		"client_image_url": "http://img10.360buyimg.com/n7/jfs/t2980/224/1098086213/458686/99785fc3/5774efa2N720255ad.jpg!q70.jpg",
+    		"client_amount": 25.12,
+    		"good_evaluate_rate": 95
+		},{
+    		"client_name": "客户名称21",
+    		"client_image_url": "img/test/car2.jpg",
+    		"client_amount": 25.12,
+    		"good_evaluate_rate": 95
+		},{
+    		"client_name": "客户名称3",
+    		"client_image_url": "img/test/index-banner2.png",
+    		"client_amount": 25.12,
+    		"good_evaluate_rate": 95
+		},{
+    		"client_name": "客户名称4",
+    		"client_image_url": "img/test/activity2.png",
+    		"client_amount": 25.12,
+    		"good_evaluate_rate": 95
+		},{
+            "client_name": "客户名称21",
+            "client_image_url": "img/test/car2.jpg",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称3",
+            "client_image_url": "img/test/index-banner2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称4",
+            "client_image_url": "img/test/activity2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称21",
+            "client_image_url": "img/test/car2.jpg",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称3",
+            "client_image_url": "img/test/index-banner2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称4",
+            "client_image_url": "img/test/activity2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称21",
+            "client_image_url": "img/test/car2.jpg",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称3",
+            "client_image_url": "img/test/index-banner2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称4",
+            "client_image_url": "img/test/activity2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称21",
+            "client_image_url": "img/test/car2.jpg",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称3",
+            "client_image_url": "img/test/index-banner2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称4",
+            "client_image_url": "img/test/activity2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称21",
+            "client_image_url": "img/test/car2.jpg",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称3",
+            "client_image_url": "img/test/index-banner2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称4",
+            "client_image_url": "img/test/activity2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称21",
+            "client_image_url": "img/test/car2.jpg",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称3",
+            "client_image_url": "img/test/index-banner2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        },{
+            "client_name": "客户名称4",
+            "client_image_url": "img/test/activity2.png",
+            "client_amount": 25.12,
+            "good_evaluate_rate": 95
+        }]
+    }
+}

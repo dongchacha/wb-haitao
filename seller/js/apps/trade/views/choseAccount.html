@@ -1,0 +1,9 @@
+	<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+	<div class="data-list half-top-border">
+		<div class="data-item half-bottom-botder" ng-repeat="item in bankAccountList" ng-click="choseAccount($index)">
+			<img ng-src="{{item.url}}">
+			<p class="name">{{item.bank_name}}</p>
+			<p class="num">尾号{{item.bank_no.substr(item.bank_no.length-4,4)}}</p>
+			<i class="iconfont icon-dui" ng-if="chosedBankAccount.id==item.id"></i>
+		</div>
+	</div>

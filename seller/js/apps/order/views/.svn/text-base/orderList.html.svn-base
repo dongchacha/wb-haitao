@@ -1,0 +1,108 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+<div class="nav-bar half-bottom-border" ng-init="getUserInfo()">
+	<a ui-sref-active="curr" ui-sref="order.orderList({type: 0})">
+		<span>全部</span>
+	</a>
+	<a ui-sref-active="curr" ui-sref="order.orderList({type: 1})">
+		<span>待付款
+		<b ng-if="userInfo.order_nopay_count > 0">{{userInfo.order_nopay_count > 99 ? "99+" : userInfo.order_nopay_count}}</b></span>
+	</a>
+	<a ui-sref-active="curr" ui-sref="order.orderList({type: 2})">
+		<span>待发货
+		<b ng-if="userInfo.order_nosend_count > 0">{{userInfo.order_nosend_count > 99 ? "99+" : userInfo.order_nosend_count}}</b></span>
+	</a>
+	<a ui-sref-active="curr" ui-sref="order.orderList({type: 3})">
+		<span>待收货
+		<b ng-if="userInfo.order_noreceipt_count > 0">{{userInfo.order_noreceipt_count > 99 ? "99+" : userInfo.order_noreceipt_count}}</b></span>
+	</a>
+	<a ui-sref-active="curr" ui-sref="order.orderList({type: 4})">
+		<span>待评价
+		<b ng-if="userInfo.order_noeval_count > 0">{{userInfo.order_noeval_count > 99 ? "99+" : userInfo.order_noeval_count}}</b></span>
+	</a>
+	<a ui-sref-active="curr" ui-sref="order.saledOrderList">
+		<span>售后</span>
+	</a>
+</div>
+
+<div class="pro-wrapper">
+	<div style="height: 88px;"></div>
+	<div class="my-scroll-pager" get-data-fn="pullData()" ng-model="pagerParams.curpage" page-count="pageCount" load-mark="isLoading">
+		<div class="pro-list">
+			<div class="pro-item" ng-repeat="order in dataList">
+				<header class="rect half-bottom-border ks-clear">
+					<i class="iconfont" ng-class='{true: "icon-chooses",false:"icon-choosen"}[!!order.checked]' ng-click="checkStore($index)" ng-if="pagerParams.state == 1"></i>
+					<a><i class="iconfont icon-storen"></i>{{order.store_name}}</a>
+					<span class="ks-cPrimary" ng-if="order.order_state == 10">等待买家付款</span>	
+					<span class="ks-cPrimary" ng-if="order.order_state == 0">交易关闭</span>	
+					<span class="ks-cPrimary" ng-if="order.order_state == 20">买家已付款</span>	
+					<span class="ks-cPrimary" ng-if="order.order_state == 30">卖家已发货</span>	
+					<span class="ks-cPrimary" ng-if="order.order_state == 40">交易成功</span>			
+				</header>
+
+				<div class="section half-bottom-border" ng-repeat="pro in order.extend_order_goods" ui-sref="order.orderDetail({orderId: order.order_id})">
+					<i class="iconfont" ng-class='{true: "icon-chooses",false:"icon-choosen"}[!!pro.checked]' ng-click="checkSingle($event, $parent.$index, $index)" ng-show="pagerParams.state == 1"></i>
+					<span class="pic half-border"><img bt-pic ng-model="pro.goods_image_url" /></span>
+					<div class="info-rect">
+						<div class="title">
+							<span>{{pro.goods_name}}</span>
+							<span class="price">¥{{Util.toFixed(pro.goods_price, 2)}}<b>x{{pro.goods_num}}</b></span>
+						</div>
+						<div class="desc">
+							<span ng-repeat="spec in pro.goods_spec.split(',')">{{spec.split(':')[0]}}<b>{{spec.split(':')[1]}}</b></span>
+						</div>
+						<div class="fTo-bottom ks-clear" ng-if="false">
+							<a class="common-btn ks-fright" ng-if="(order.order_state == 20 || order.order_state == 30) && pro.refund_info == 0" ng-click="applySaled($event, order, pro)">退款</a>
+							<a class="common-btn ks-fright" ng-if="order.order_state == 40 && pro.refund_info == 0" ng-click="applySaled($event, order, pro)">退款/退货</a>
+							<a class="common-btn ks-fright" ng-if="pro.refund_info == 1">处理中</a>
+							<a class="common-btn ks-fright" ng-if="pro.refund_info == 2">已完成</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="rect half-bottom-border stat-rect">
+					共{{order.goods_num}}件商品 合计：<span class="ks-cPrimary">¥<strong>{{Util.toFixed(order.order_amount, 2)}}</strong></span><span class="shipping-fee" ng-if="order.shipping_fee > 0">含运费 ¥{{order.shipping_fee}}</span>
+				</div>
+
+				<div class="rect half-bottom-border action-rect" ng-if="false">	
+					<!--待付款-->			
+					<a class="common-btn" ng-if="order.order_state == 10" ng-click="cancelOrder(order)">取消订单</a>
+					<a class="common-btn ks-cPrimary" ng-if="order.order_state == 10" ng-click="settlement(order)">去结算</a>
+
+					<!--待发货-->	
+
+					<!--待收货-->			
+					<a class="common-btn" ng-if="order.order_state == 30" ng-click="delayReceive(order)">延迟收货</a>
+					<!-- <a class="common-btn" ng-if="order.order_state == 30" ui-sref="delivery.list({orderId: order.order_id})">查看物流</a> -->
+					<a class="common-btn ks-cPrimary" ng-if="order.order_state == 30" ng-click="confirmReceive(order)">确认收货</a>
+
+					<!--待评价-->			
+					<a class="common-btn" ng-if="order.order_state == 40" ng-click="delOrder(order)">删除订单</a>
+					<!-- <a class="common-btn" ng-if="order.order_state == 40" ui-sref="delivery.list({orderId: order.order_id})">查看物流</a> -->
+					<a class="common-btn ks-cPrimary" ng-if="order.order_state == 40 && order.evaluation_state == 0" ui-sref="order.addEveluate({orderId: order.order_id})">评价</a>
+					<a class="common-btn ks-cPrimary" ng-if="order.order_state == 40 && order.evaluation_again_state == 0" ui-sref="order.addEveluateAgain({orderId: order.order_id})">追加评价</a>
+
+					<!--交易成功-->
+					<!-- <a class="common-btn" ng-if="order.order_state == 40" ng-click="delOrder(order)">删除订单</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="height: 44px;"></div>
+<!-- 	<div style="height: 44px;" ng-style="{height: dataList.length > 0 && pagerParams.state == 1 ? '88px' : '44px'}"></div> -->
+</div>
+
+<div class="order-stat-container half-top-border ks-clear" ng-if="dataList.length > 0 && pagerParams.state == 1" style="bottom: 44px;" ng-show="false">
+	<span class="chose-box" ng-click="checkAll()"><i class="iconfont" ng-class='{true: "icon-chooses",false:"icon-choosen"}[!!allChecked]'></i>全选</span>
+	<span class="stat">合计: <b>¥ {{Util.toFixed(totalSum, 2)}}</b></span>
+	<a class="settlement" ng-class='{true: "forbid"}[chosedCount==0]' href="javascript:void(0);" ng-click="settlement()">合并结算</a>
+</div>
+
+<div class="noData" ng-if="!isLoading&&dataList.length==0">
+	<div class="content">
+		<i class="iconfont icon-notice"></i>
+		<p>您还没有相应的订单</p>
+		<a ui-sref="product.list()">随便逛逛</a>
+	</div>
+</div>
+
+<div ng-include="'js/apps/common/views/bottomNav.html'"></div>

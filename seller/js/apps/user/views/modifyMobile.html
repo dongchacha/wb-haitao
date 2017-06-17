@@ -1,0 +1,29 @@
+<div class="common-header" ng-include="'js/apps/common/views/headerNav.html'"></div>
+
+<div class="wrapper form-wrapper">
+    <form class="gForm">
+        <div class="form-item mobile-item half-bottom-border">
+            <span class="left">密  码:</span>
+            <span class="main">
+                <input type="password" placeholder="请输入密码" ng-model="model.password" />
+            </span>
+        </div>
+        <div class="form-item mobile-item half-bottom-border">
+            <span class="left">手机号：</span>
+            <span class="main">
+                <input type="tel" placeholder="请输入手机号" ng-model="model.mobile" />
+            </span>
+        </div>
+
+        <div class="form-item validCode-item half-bottom-border">
+            <span class="left">验证码：</span>
+            <span class="main">
+                <input type="text" placeholder="请输入验证码" ng-model="model.verifycode" />
+                <a href="javascript:void(0);" class="getCode" ng-class='{true: "forbid"}[secCount > 0]' ng-click="getCode()">{{getCodeName}}</a>
+            </span>
+        </div>
+    </form>
+    <div class="action-container">
+        <a class="action-btn" href="javascript:void(0);" ng-click="submit()">确认</a>
+    </div>
+</div>

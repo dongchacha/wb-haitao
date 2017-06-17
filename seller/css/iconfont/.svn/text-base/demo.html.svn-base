@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <div class="main">
+        <h1>IconFont 图标</h1>
+        <ul class="icon_lists clear">
+            
+                <li>
+                <i class="icon iconfont">&#xe60b;</i>
+                    <div class="name">phone</div>
+                    <div class="code">&amp;#xe60b;</div>
+                    <div class="fontclass">.phone</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe60c;</i>
+                    <div class="name">phone</div>
+                    <div class="code">&amp;#xe60c;</div>
+                    <div class="fontclass">.phone1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe61b;</i>
+                    <div class="name">加</div>
+                    <div class="code">&amp;#xe61b;</div>
+                    <div class="fontclass">.xiao64</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe60e;</i>
+                    <div class="name">银行卡</div>
+                    <div class="code">&amp;#xe60e;</div>
+                    <div class="fontclass">.yinxingqia</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe612;</i>
+                    <div class="name">图片</div>
+                    <div class="code">&amp;#xe612;</div>
+                    <div class="fontclass">.tupian</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe62b;</i>
+                    <div class="name">交易</div>
+                    <div class="code">&amp;#xe62b;</div>
+                    <div class="fontclass">.jiaoyi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe611;</i>
+                    <div class="name">分销</div>
+                    <div class="code">&amp;#xe611;</div>
+                    <div class="fontclass">.fenxiao</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe62a;</i>
+                    <div class="name">手机</div>
+                    <div class="code">&amp;#xe62a;</div>
+                    <div class="fontclass">.p-shouji</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe625;</i>
+                    <div class="name">删除</div>
+                    <div class="code">&amp;#xe625;</div>
+                    <div class="fontclass">.shanchu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe622;</i>
+                    <div class="name">历史</div>
+                    <div class="code">&amp;#xe622;</div>
+                    <div class="fontclass">.lishi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe620;</i>
+                    <div class="name">钱包</div>
+                    <div class="code">&amp;#xe620;</div>
+                    <div class="fontclass">.qianbao</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe61c;</i>
+                    <div class="name">对</div>
+                    <div class="code">&amp;#xe61c;</div>
+                    <div class="fontclass">.dui</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe60d;</i>
+                    <div class="name">提现</div>
+                    <div class="code">&amp;#xe60d;</div>
+                    <div class="fontclass">.tixian</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe621;</i>
+                    <div class="name">钱包</div>
+                    <div class="code">&amp;#xe621;</div>
+                    <div class="fontclass">.qianbao1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe615;</i>
+                    <div class="name">微信</div>
+                    <div class="code">&amp;#xe615;</div>
+                    <div class="fontclass">.weixin-copy</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe60f;</i>
+                    <div class="name">历史</div>
+                    <div class="code">&amp;#xe60f;</div>
+                    <div class="fontclass">.lishi1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe61a;</i>
+                    <div class="name">银行卡</div>
+                    <div class="code">&amp;#xe61a;</div>
+                    <div class="fontclass">.yinxingqia1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe613;</i>
+                    <div class="name">店铺</div>
+                    <div class="code">&amp;#xe613;</div>
+                    <div class="fontclass">.dianpu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe610;</i>
+                    <div class="name">余额_提现</div>
+                    <div class="code">&amp;#xe610;</div>
+                    <div class="fontclass">.shiliangzhinengduixiang0201</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe627;</i>
+                    <div class="name">等级1</div>
+                    <div class="code">&amp;#xe627;</div>
+                    <div class="fontclass">.dengji1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe628;</i>
+                    <div class="name">等级2</div>
+                    <div class="code">&amp;#xe628;</div>
+                    <div class="fontclass">.dengji2</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe61d;</i>
+                    <div class="name">none_s</div>
+                    <div class="code">&amp;#xe61d;</div>
+                    <div class="fontclass">.nones</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe60a;</i>
+                    <div class="name">none</div>
+                    <div class="code">&amp;#xe60a;</div>
+                    <div class="fontclass">.none</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe626;</i>
+                    <div class="name">add_n</div>
+                    <div class="code">&amp;#xe626;</div>
+                    <div class="fontclass">.addn</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe614;</i>
+                    <div class="name">adress</div>
+                    <div class="code">&amp;#xe614;</div>
+                    <div class="fontclass">.adress</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe600;</i>
+                    <div class="name">add_s</div>
+                    <div class="code">&amp;#xe600;</div>
+                    <div class="fontclass">.adds</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe604;</i>
+                    <div class="name">arrow</div>
+                    <div class="code">&amp;#xe604;</div>
+                    <div class="fontclass">.arrow</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe623;</i>
+                    <div class="name">arrow</div>
+                    <div class="code">&amp;#xe623;</div>
+                    <div class="fontclass">.arrow-left</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe616;</i>
+                    <div class="name">文章</div>
+                    <div class="code">&amp;#xe616;</div>
+                    <div class="fontclass">.wenzhang</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe624;</i>
+                    <div class="name">moreCar</div>
+                    <div class="code">&amp;#xe624;</div>
+                    <div class="fontclass">.close</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe62d;</i>
+                    <div class="name">表情删除键</div>
+                    <div class="code">&amp;#xe62d;</div>
+                    <div class="fontclass">.biaoqingshanchujian</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe601;</i>
+                    <div class="name">shopping-48px-glyph_tag</div>
+                    <div class="code">&amp;#xe601;</div>
+                    <div class="fontclass">.shopping48pxglyphtag</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe602;</i>
+                    <div class="name">shopping-48px-glyph-2_new</div>
+                    <div class="code">&amp;#xe602;</div>
+                    <div class="fontclass">.shopping48pxglyph2new</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe603;</i>
+                    <div class="name">shopping-48px-glyph_bag-add-21</div>
+                    <div class="code">&amp;#xe603;</div>
+                    <div class="fontclass">.shopping48pxglyphbagadd21</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe605;</i>
+                    <div class="name">shopping-48px-glyph_bag-16</div>
+                    <div class="code">&amp;#xe605;</div>
+                    <div class="fontclass">.shopping48pxglyphbag16</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe606;</i>
+                    <div class="name">shopping-48px-glyph_receipt-list-43</div>
+                    <div class="code">&amp;#xe606;</div>
+                    <div class="fontclass">.shopping48pxglyphreceiptlist43</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe607;</i>
+                    <div class="name">business-48px-glyph_money-bag</div>
+                    <div class="code">&amp;#xe607;</div>
+                    <div class="fontclass">.business48pxglyphmoneybag</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe608;</i>
+                    <div class="name">shopping-48px-glyph-2_store</div>
+                    <div class="code">&amp;#xe608;</div>
+                    <div class="fontclass">.shopping48pxglyph2store</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe609;</i>
+                    <div class="name">users-48px-glyph_multiple-11</div>
+                    <div class="code">&amp;#xe609;</div>
+                    <div class="fontclass">.users48pxglyphmultiple11</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe617;</i>
+                    <div class="name">business-48px-glyph_money-time</div>
+                    <div class="code">&amp;#xe617;</div>
+                    <div class="fontclass">.business48pxglyphmoneytime</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe618;</i>
+                    <div class="name">business-48px-glyph_round-yen</div>
+                    <div class="code">&amp;#xe618;</div>
+                    <div class="fontclass">.business48pxglyphroundyen</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe619;</i>
+                    <div class="name">交易记录</div>
+                    <div class="code">&amp;#xe619;</div>
+                    <div class="fontclass">.arrows48pxglyph1direction56</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe61e;</i>
+                    <div class="name">首页_默认</div>
+                    <div class="code">&amp;#xe61e;</div>
+                    <div class="fontclass">.shouyemoren</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe61f;</i>
+                    <div class="name">home</div>
+                    <div class="code">&amp;#xe61f;</div>
+                    <div class="fontclass">.home</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe62c;</i>
+                    <div class="name">星号</div>
+                    <div class="code">&amp;#xe62c;</div>
+                    <div class="fontclass">.asterisks-1-copy</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe629;</i>
+                    <div class="name">会员名单</div>
+                    <div class="code">&amp;#xe629;</div>
+                    <div class="fontclass">.huiyuanmingdan</div>
+                </li>
+            
+        </ul>
+
+
+        <div class="helps">
+            第一步：使用font-face声明字体
+            <pre>
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+</pre>
+第二步：定义使用iconfont的样式
+            <pre>
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+</pre>
+第三步：挑选相应图标并获取字体编码，应用于页面
+<pre>
+&lt;i class="iconfont"&gt;&amp;#x33;&lt;/i&gt;
+</pre>
+        </div>
+
+    </div>
+</body>
+</html>
